@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CortenFreight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Corten Freight - Our Services</title>
+    <meta name="description"
+        content="Corten Freight is a leading freight brokerage firm, offering reliable, precise, and innovative logistics solutions." />
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+</head>
+
+<body class="text-slate-800 bg-white">
+    <!-- Header starts here -->
+    <header class="flex justify-between items-center px-4 py-4 bg-white shadow-md sticky top-0 z-10 lg:h-[80px]">
+        <div class="max-w-[1120px] w-full mx-auto flex items-center justify-between">
+            <div class="text-xl font-bold"><a href="index.html"><img src="images/corten-freight-logo.svg"
+                        alt="corten freight logo" /></a></div>
+
+            <!-- Desktop Nav starts here -->
+            <nav class="hidden md:flex gap-6 text-sm">
+                <a href="javascript:void(0);" class="hover:underline active">Our Services</a>
+                <a href="who-we-are.html" class="hover:underline ">Who We Are</a>
+                <a href="contact-us.html" class="hover:underline">Contact Us</a>
+            </nav>
+            <!-- Desktop Nav ends here -->
+
+            <!-- Mobile Menu Button starts here -->
+            <button id="mobile-menu-toggle" class="md:hidden focus:outline-none ml-4">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+            <!-- Mobile Menu Button ends here -->
+
+            <!-- CTA Button -->
+            <button
+                class="hidden md:block bg-orange-500 text-white text-sm px-4 py-2 rounded-lg request-quote-btn">Request
+                a Quote</button>
+        </div>
+    </header>
+    <!-- Header ends here -->
+
+    <!-- Mobile Nav -->
+    <div id="mobile-menu"
+        class="fixed top-0 left-0 w-full  bg-[var(--mobile--bg-color)] bg-opacity-95 z-40 overflow-hidden transition-all duration-300 max-h-0 opacity-0 ">
+        <div class="flex flex-col items-center justify-center space-y-6 py-12 text-white text-lg font-medium">
+            <button id="close-menu" class="absolute top-6 right-6">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <a href="javascript:void(0);" class="hover:underline active">Our Services</a>
+            <a href="who-we-are.html" class="hover:underline ">Who We Are</a>
+            <a href="contact-us.html" class="hover:underline">Contact Us</a>
+            <a href="#quote"
+                class="bg-white text-blue-600 px-4 py-2 rounded border hover:bg-blue-600 hover:text-white transition request-quote-btn">Request
+                a Quote</a>
+        </div>
+    </div>
+
+    <!-- --header-cta-bg-color -->
+
+
+    <!-- Hero -->
+    <section class="hero-bg our-services relative bg-cover bg-center bg-no-repeat bg-fixed text-center px-6 py-24 min-h-[480px] md:min-h-[640px] flex 
+    items-center justify-center h-screen h-dvh lg:h-[calc(100dvh-80px)]">
+        <h1 class="text-white text-3xl md:text-4xl font-normal">Our Services</h1>
+
+        <!-- Scroll Button at Bottom -->
+        <a href="#services" id="scroll-btn"
+            class="absolute left-1/2 bottom-[58px] flex flex-col items-center group scroll-button">
+            <img src="images/SCROLL.png" alt="Scroll Button" class="w-12 h-12" />
+            <span class="text-white text-sm mt-1 tracking-wider">SCROLL</span>
+        </a>
+
+    </section>
+
+
+    <!-- Trust Section -->
+    <section id="services" class="py-16 px-6 text-center bg-[var(--section-top-bg-color)]">
+        <h2 class="text-xl font-normal mb-4 text-white">Reliable Freight Brokerage Solutions Tailored to Your Needs</h2>
+        <p class="max-w-2xl mx-auto text-sm text-white">
+            At Corten Freight, we provide comprehensive freight services designed to ensure your cargo moves
+            efficiently, safely, and reliably. Explore our core offerings:
+        </p>
+    </section>
+
+
+
+
+
+    <!-- Services Section -->
+    <section
+        class="relative min-h-[480px] md:min-h-[520px] overflow-hidden home-bottom-image-section px-6 pt-[60px] lg:pb-[220px]">
+        <div class="max-w-[1120px] mx-auto ">
+
+
+            <!-- Drayage Services -->
+            <div
+                class="grid md:grid-cols-2 gap-8 items-center mb-16 bg-white p-3 shadow text-center rounded-lg column-box text-[var(--main-blue-color)]">
+                <div class="text-left">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">Drayage Services</h3>
+                    <ul class="text-sm space-y-2 text-slate-700">
+                        <li><strong>Port-To-Warehouse & Rail-To-Door Delivery</strong><br>Smooth cargo transfers to
+                            reduce downtime and keep your supply chain moving.</li>
+                        <li><strong>Expedited Handling</strong><br>Solutions tailored for urgent, time-sensitive
+                            shipments.</li>
+                        <li><strong>Customs & Compliance Expertise</strong><br>Navigate complex regulatory environments
+                            with ease, ensuring hassle-free transport.</li>
+                    </ul>
+                    <button class="mt-4 bg-orange-500 text-white px-4 py-2 rounded text-sm request-quote-btn">Request a
+                        Quote</button>
+                </div>
+                <div><img src="images/our_services_a.jpg"
+                        srcset="images/our_services_a.jpg 1x, images/our_services_a@2x.jpg 2x" alt="Trucking Services"
+                        class="rounded shadow w-full" alt="Our services A" width="auto" height="auto" loading="lazy" />
+                </div>
+            </div>
+
+            <!-- Over-The-Road Trucking -->
+            <div
+                class="grid md:grid-cols-2 gap-8 items-center mb-16 bg-white p-3 shadow text-center rounded-lg column-box text-[var(--main-blue-color)]">
+                <div class="order-2 md:order-1">
+                    <img src="images/our_services_b.jpg"
+                        srcset="images/our_services_b.jpg 1x, images/our_services_b@2x.jpg 2x" alt="Trucking Services"
+                        class="rounded shadow w-full" alt="our services B" width="auto" height="auto" loading="lazy" />
+                </div>
+                <div class="order-1 md:order-2 text-left">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">Over-The-Road Trucking</h3>
+                    <ul class="text-sm space-y-2 text-slate-700">
+                        <li><strong>Flexible Options (FTL & LTL)</strong><br>Smooth cargo transitions to reduce downtime
+                            and keep your supply chain moving.</li>
+                        <li><strong>Temperature-Controlled & Dry Van Shipping</strong><br>Protect your cargo’s
+                            integrity, whether it’s perishable, sensitive, or standard goods.</li>
+                        <li><strong>Dedicated & Expedited Freight</strong><br>Customized transportation plans designed
+                            for reliability and speed.</li>
+                    </ul>
+                    <button class="mt-4 bg-orange-500 text-white px-4 py-2 rounded text-sm request-quote-btn">Request a
+                        Quote</button>
+                </div>
+            </div>
+
+            <!-- Specialized Cargo Handling -->
+            <div
+                class="grid md:grid-cols-2 gap-8 items-center mb-16 bg-white p-3 shadow text-center rounded-lg column-box text-[var(--main-blue-color)]">
+                <div class="text-left">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">Specialized Cargo Handling</h3>
+                    <ul class="text-sm space-y-2 text-slate-700">
+                        <li><strong>Heavy Haul & Oversized Freight</strong><br>Tailored logistics for large equipment
+                            and machinery, from planning to delivery.</li>
+                        <li><strong>Secure Handling</strong><br>Enhanced protection measures and real-time tracking to
+                            ensure your sensitive cargo arrives safely.</li>
+                        <li><strong>Custom Logistics Solutions</strong><br>Individualized strategies to address unique
+                            challenges, providing peace of mind.</li>
+                    </ul>
+                    <button class="mt-4 bg-orange-500 text-white px-4 py-2 rounded text-sm request-quote-btn">Request a
+                        Quote</button>
+                </div>
+                <div><img src="images/our_services_c.jpg"
+                        srcset="images/our_services_c.jpg 1x, images/our_services_c@2x.jpg 2x" alt="Trucking Services"
+                        class="rounded shadow w-full" alt="Our services c" width="auto" height="auto" loading="lazy" />
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!-- Book Section -->
+    <section class="py-16 px-6 text-center bg-[var(--section-bottom-bg-color)]">
+        <h2 class="text-xl font-normal mb-4 text-white">Book Your Next Shipment Now</h2>
+        <p class="text-sm max-w-xl mx-auto mb-6 text-white">
+            Our mission is to be the leading service provider in the transportation industry and continue to build a
+            company to be proud of.
+        </p>
+        <button class="bg-orange-500 text-white px-4 py-2 text-sm rounded-lg request-quote-btn">Request a Quote</button>
+    </section>
+
+    <!-- Footer -->
+    <footer class=" text-white py-10 px-6 bg-[var(--footer-background-color)]">
+        <div class="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+            <!-- Column 1: Logo & CTA -->
+            <div>
+
+
+                <a href="../index.html" class="block mx-auto w-fit">
+                    <img src="images/corten-freight-logo-white.svg" alt="corten freight logo" class="mx-auto">
+                </a>
+
+                <button
+                    class="mt-4 bg-transparent border border-white px-4 py-2 text-sm rounded-lg mx-auto block request-quote-btn">
+                    Request a Quote
+                </button>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="space-y-2">
+                <a href="#" class="block">Our Services</a>
+                <a href="#" class="block">Who We Are</a>
+                <a href="#" class="block">Contact Us</a>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="space-y-2">
+                <a href="#" class="block">Privacy Rights</a>
+                <a href="#" class="block">Terms</a>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="space-y-2">
+                <a href="#" class="block">EEO</a>
+                <a href="#" class="block">Responsible Care</a>
+            </div>
+        </div>
+
+        <!-- Bottom line -->
+        <p class="text-xs text-center mt-8">&copy; 2025 Corten Freight, LLC</p>
+    </footer>
+
+    <!-- Modal starts here -->
+    <div id="quote-modal" class="fixed inset-0 z-50 hidden items-center justify-center modal-overlay">
+        <div
+            class="bg-white rounded-lg shadow-lg p-8 w-full max-w-3xl mx-auto relative z-50 overflow-y-auto max-h-[90vh]">
+            <h2 class="text-center text-2xl font-semibold text-blue-700 mb-6">Shipment Quote</h2>
+
+            <div id="thank-you-message" class="hidden text-center text-green-600 font-semibold text-lg py-8">
+                Thank you! Your request has been submitted successfully.
+            </div>
+            <form action="https://formcarry.com/s/aVYiV3KXLvw" method="POST" id="quote-form" class="space-y-4">
+
+                <!-- Spam prevention -->
+                <!-- <input name="_formsubmit_id" type="text" style="display:none"> -->
+
+                <!-- First + Last Name -->
+                <div class="flex flex-col md:flex-row md:gap-4">
+                    <div class="w-full">
+                        <label class="block text-sm font-medium">First Name <span class="text-red-500">*</span></label>
+                        <input type="text" name="First Name" required class="w-full border px-3 py-2 rounded">
+                    </div>
+                    <div class="w-full">
+                        <label class="block text-sm font-medium">Last Name <span class="text-red-500">*</span></label>
+                        <input type="text" name="Last Name" required class="w-full border px-3 py-2 rounded">
+                    </div>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <label class="block text-sm font-medium">Company <span class="text-red-500">*</span></label>
+                    <input type="text" name="Company" required class="w-full border px-3 py-2 rounded">
+                </div>
+
+                <!-- Phone + Email -->
+                <div class="flex flex-col md:flex-row md:gap-4">
+                    <div class="w-full">
+                        <label class="block text-sm font-medium">Phone Number <span
+                                class="text-red-500">*</span></label>
+                        <input type="tel" name="Phone Number" pattern="[0-9\-+\s]+" required
+                            class="w-full border px-3 py-2 rounded">
+                    </div>
+                    <div class="w-full">
+                        <label class="block text-sm font-medium">Email <span class="text-red-500">*</span></label>
+                        <input type="email" name="Email" required class="w-full border px-3 py-2 rounded">
+                    </div>
+                </div>
+
+                <!-- Origin + Destination -->
+                <div class="flex flex-col md:flex-row md:gap-4">
+                    <div class="w-full">
+                        <label class="block text-sm font-medium">Origin (City/State/Province/Zip) <span
+                                class="text-red-500">*</span></label>
+                        <input type="text" name="Origin" required class="w-full border px-3 py-2 rounded">
+                    </div>
+                    <div class="w-full">
+                        <label class="block text-sm font-medium">Destination (City/State/Province/Zip) <span
+                                class="text-red-500">*</span></label>
+                        <input type="text" name="Destination" required class="w-full border px-3 py-2 rounded">
+                    </div>
+                </div>
+
+                <!-- Equipment -->
+                <div class="flex flex-col md:flex-row md:gap-4">
+                    <div class="w-full">
+                        <label class="block text-sm font-medium">Equipment Type <span
+                                class="text-red-500">*</span></label>
+                        <input type="text" name="Equipment Type" required class="w-full border px-3 py-2 rounded">
+                    </div>
+                    <div class="w-full">
+                        <label class="block text-sm font-medium">Equipment Size <span
+                                class="text-red-500">*</span></label>
+                        <input type="text" name="Equipment Size" required class="w-full border px-3 py-2 rounded">
+                    </div>
+                </div>
+
+                <!-- Optional Fields -->
+                <div class="flex flex-col md:flex-row md:gap-4">
+                    <div class="w-full">
+                        <label class="block text-sm font-medium">Commodity</label>
+                        <input type="text" name="Commodity" class="w-full border px-3 py-2 rounded">
+                    </div>
+                    <div class="w-full">
+                        <label class="block text-sm font-medium">Weight</label>
+                        <input type="text" name="Weight" class="w-full border px-3 py-2 rounded">
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div>
+                    <label class="block text-sm font-medium">Additional Freight / Shipment Details <span
+                            class="text-red-500">*</span></label>
+                    <textarea name="Details" rows="3" required class="w-full border px-3 py-2 rounded"></textarea>
+                </div>
+
+                <!-- Agreement Checkbox -->
+                <div class="flex items-start gap-2">
+                    <input type="checkbox" id="agree" name="I Agree to Terms" required class="mt-1">
+                    <label for="agree" class="text-sm">
+                        I agree to Corten Freight's <a href="#" class="text-blue-600 underline">Terms of Use</a> and
+                        <a href="#" class="text-blue-600 underline">Privacy Policy</a>
+                    </label>
+                </div>
+
+                <!-- Optional Redirect -->
+                <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you.html" /> -->
+
+                <!-- Submit -->
+                <div class="text-center">
+                    <button type="submit" class="bg-orange-500 text-white px-6 py-2 rounded">Get Quote</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal ends here -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

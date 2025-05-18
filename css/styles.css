@@ -1,0 +1,310 @@
+@charset "UTF-8";
+
+/* @import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap'); */
+
+:root {
+  /* --header-cta-bg-color: rgba(48,152,231,95); */
+  --header-border-color:#1A5C8E;
+  --header-nav-color: #29323F;
+  --mobile--bg-color: #3098E7;
+  --header-cta-bg-color: #3098E7;
+  --section-top-bg-color: #418ECA;
+  --section-middle-bg-color: #4D98D2;
+  --section-bottom-bg-color: #0F6FBE;
+  --footer-background-color: #1A5C8E;
+  --main-blue-color: #064F88;
+  --nav-gap:52px;
+
+}
+
+body,
+html {
+  font-size: 16px;
+}
+
+body {
+
+
+  font-family: "Spectral", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h2.text-xl {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+p.text-sm {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.column-box h3 {
+  font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .column-box h3 {
+    font-size: 28px;
+  }
+
+}
+
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.body-modal-open {
+  overflow: hidden;
+}
+
+/* 
+  
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+body.menu-open::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 30;
+}
+
+section {
+  z-index: 1;
+}
+
+/* header styles starts here */
+header{
+  border-top: 8px;
+  background-color: #1A5C8E;
+}
+header nav{
+
+}
+header nav a{
+  /* color:#29323F; */
+  
+}
+/* header styles ends here */
+
+.cta-header {
+  /* opacity: 0.95%; */
+  background-color: rgba(48, 152, 231, 0.95);
+}
+
+
+
+/* hero bg images and styles starts here */
+.hero-bg {
+  background-image: url('../images/home-main-hero-desktop-1440-up.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Remove background-attachment: fixed */
+  ;
+}
+
+@media (min-width: 768px) {
+  .hero-bg {
+    background-image: url('../images/home-main-hero-desktop-1440-up.jpg');
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-bg {
+    background-image: url('../images/home-main-hero-desktop-1440-up.jpg');
+  }
+}
+
+/* hero bg images and styles ends here */
+
+/* home middle image section and styles starts here */
+.home-middle-image-section {
+  background-image: url('../images/home-section-highway-truck-desktop-1440-up.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Remove background-attachment: fixed */
+  ;
+}
+
+@media (min-width: 768px) {
+  .home-middle-image-section {
+    background-image: url('../images/home-section-highway-truck-desktop-1440-up.jpg');
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-middle-image-section {
+    background-image: url('../images/home-section-highway-truck-desktop-1440-up.jpg');
+  }
+}
+
+/* home middle image section and styles ends here */
+
+/* home bottom image with ports and shipping container section and styles starts here */
+.home-bottom-image-section {
+  background-image: url('../images/home-section-port-shipp-desktop-1440-up.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Remove background-attachment: fixed */
+  ;
+}
+
+@media (min-width: 768px) {
+  .home-midbottomdle-image-section {
+    background-image: url('/images/home-section-port-shipp-desktop-1440-up.jpg');
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-bottom-image-section {
+    background-image: url('../images/home-section-port-shipp-desktop-1440-up.jpg');
+  }
+}
+
+/* home bottom image with ports and shipping container section and styles ends here */
+
+/*  our services hero bg images and styles starts here */
+.hero-bg.our-services {
+  background-image: url('../images/our-services-main-hero-desktop-1440-up.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Remove background-attachment: fixed */
+  ;
+}
+
+@media (min-width: 768px) {
+  .hero-bg.our-services {
+    background-image: url('../images/our-services-main-hero-desktop-1440-up.jpg');
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-bg.our-services {
+    background-image: url('../images/our-services-main-hero-desktop-1440-up.jpg');
+  }
+}
+
+/* our services hero bg images and styles ends here */
+
+
+/* our services middle bg images with port and containers container section and styles starts here */
+.home-bottom-image-section {
+  background-image: url('../images/our-services-section-port-desktop-1440-up.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Remove background-attachment: fixed */
+  ;
+}
+
+@media (min-width: 768px) {
+  .home-midbottomdle-image-section {
+    background-image: url('/images/hour-services-section-port-desktop-1440-up.jpg');
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-bottom-image-section {
+    background-image: url('../images/our-services-section-port-desktop-1440-up.jpg');
+  }
+}
+
+/* our services middle bg images with port and containers container section and styles ends here */
+
+
+/*  who we are hero bg images and styles starts here */
+.hero-bg.who-we-are {
+  background-image: url('../images/who-we-are-main-hero-desktop-1440-up.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Remove background-attachment: fixed */
+  ;
+}
+
+@media (min-width: 768px) {
+  .hero-bg.who-we-are {
+    background-image: url('../images/who-we-are-main-hero-desktop-1440-up.jpg');
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-bg.who-we-are {
+    background-image: url('../images/who-we-are-main-hero-desktop-1440-up.jpg');
+  }
+}
+
+/*  who we are hero bg images and styles ends here */
+
+
+/*  contact us hero bg images and styles starts here */
+.hero-bg.contact-us {
+  background-image: url('../images/contact-us-main-hero-desktop-1440-up.jpg');
+  background-size: cover;
+  background-position: center;
+  /* Remove background-attachment: fixed */
+  ;
+}
+
+@media (min-width: 768px) {
+  .hero-bg.contact-us {
+    background-image: url('../images/contact-us-main-hero-desktop-1440-up.jpg');
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-bg.contact-us {
+    background-image: url('../images/contact-us-main-hero-desktop-1440-up.jpg');
+  }
+}
+
+/*  who we are hero bg images and styles ends here */
+
+/* scroll to bottom button styles starts here */
+.scroll-button {
+  transform: translateX(-50%);
+  animation: pulse-smooth 2s infinite;
+  transition: ease-in-out 0.9s all;
+}
+
+.scroll-button:hover {
+  animation: none;
+  /* margin-bottom: -4px; */
+  transform: translateX(-50%) translateY(0);
+}
+
+@keyframes pulse-smooth {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(8px);
+    opacity: 0.7;
+  }
+}
+
+
+/* scroll to bottom button styles ends here */
