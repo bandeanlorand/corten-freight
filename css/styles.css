@@ -412,3 +412,20 @@ header nav a{
 
 
 /* scroll to bottom button styles ends here */
+form{
+  /* font-family: "Merriweather Sans", sans-serif; */
+}
+form label{
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 0.625rem;
+  font-weight: 100;
+}
+form input{
+  font-family: "Merriweather Sans", sans-serif;
+  border-color: #D7E6F1;
+  border-radius: 0;
+  font-size: 0.75rem;
+  line-height: 1.38rem;
+  font-weight: 200;
+}
