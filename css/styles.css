@@ -53,7 +53,7 @@ p {
   padding: 0;
 }
 
-h2.text-xl {
+/* h2.text-xl {
   font-size: 32px;
   line-height: 44px;
 }
@@ -61,16 +61,16 @@ h2.text-xl {
 p.text-sm {
   font-size: 16px;
   line-height: 24px;
-}
+} */
 
-.column-box h3 {
+/* .column-box h3 {
   font-size: 24px;
-}
+} */
 
 @media screen and (min-width: 768px) {
-  .column-box h3 {
+  /* .column-box h3 {
     font-size: 28px;
-  }
+  } */
 
 }
 
@@ -93,7 +93,7 @@ p.text-sm {
     opacity: 1;
   }
 } */
-body.menu-open::after {
+body.overflow-hidden::after {
   content: "";
   position: fixed;
   inset: 0;

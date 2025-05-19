@@ -1,4 +1,4 @@
-/* script for mobile menu ends here */
+/* script for mobile menu starts here */
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById('mobile-menu-toggle');
     const menu = document.getElementById('mobile-menu');
@@ -8,23 +8,28 @@ document.addEventListener("DOMContentLoaded", function () {
     body.classList.add('overflow-hidden');
     menuToggle.classList.add('menu-opened');
 
-    menu.classList.remove('opacity-0', 'max-h-0', 'pointer-events-none');
-
+    menu.classList.remove('opacity-0', 'max-h-0', 'pointer-events-none' );
+        
     requestAnimationFrame(() => {
-        menu.classList.add('opacity-100');
+        menu.classList.add('opacity-100', 'py-[17vh]', 'py-[17dvh]');
+        setTimeout(function() {
+            
 
-        // Get full height
-        const contentHeight = menu.scrollHeight;
+// Get full height
+        // const contentHeight = menu.scrollHeight;
         const windowHeight = window.innerHeight;
 
         // If content is smaller than screen, animate to content height
         if (contentHeight < windowHeight) {
-            menu.style.maxHeight = contentHeight + 'px';
+            // menu.style.maxHeight = contentHeight + 'px';
         } else {
             // If taller than screen, allow scroll
-            menu.style.maxHeight = windowHeight + 'px'; // OR leave it empty: ''
+            // menu.style.maxHeight = windowHeight + 'px'; // OR leave it empty: ''
             menu.classList.add('overflow-y-auto');
         }
+
+        }, 200);
+        
     });
 }
 
@@ -33,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
     body.classList.remove('overflow-hidden');
     menuToggle.classList.remove('menu-opened');
 
-    menu.classList.remove('opacity-100');
-    menu.classList.add('opacity-0');
-    menu.style.maxHeight = '0px';
+    menu.classList.remove('opacity-100', 'py-[17vh]', 'py-[17dvh]');
+    menu.classList.add('opacity-0', 'max-h-0');
+    // menu.style.maxHeight = '0px';
     menu.classList.remove('overflow-y-auto');
 }
 
@@ -60,17 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Close on resize beyond mobile breakpoint
-        // window.addEventListener('resize', () => {
-        //     if (window.innerWidth > 768 && menuToggle.classList.contains('menu-opened')) {
-        //         closeMenu();
-        //     }
-        // });
-
-        // Close on resize beyond mobile breakpoint
         window.addEventListener('resize', () => {
             if (window.innerWidth > 768) {
                 closeMenu();
                 menu.classList.remove('pointer-events-none');
+                // menu.classList.remove('opacity-0', 'max-h-0', 'pointer-events-none' , 'py-[17vh]', 'py-[17dvh]');
                 menu.style.maxHeight = ''; // remove inline max-height on desktop
             }
         });
