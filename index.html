@@ -14,17 +14,6 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
-    <script>
-        // const menuToggle = document.getElementById('mobile-menu-toggle');
-        // const menuClose = document.getElementById('close-menu');
-        // const menu = document.getElementById('mobile-menu');
-        // if (menuToggle && menuClose && menu) {
-        //     menuToggle.addEventListener('click', () => menu.classList.remove('hidden'));
-        //     menuClose.addEventListener('click', () => menu.classList.add('hidden'));
-        // }
-
-    </script>
-
 
     <title>Corten Freight - Home</title>
     <meta name="description"
@@ -37,40 +26,65 @@
 
 <body class="text-slate-800 bg-white">
     <!-- Header starts here -->
-     <!-- Top border bar, only visible from md and up -->
-
-
-<header class="relative bg-white shadow-md sticky top-0 z-10 md:pt-2">
     <!-- Top border bar, only visible from md and up -->
-    <div class="hidden md:block absolute top-0 left-0 w-full h-2 bg-[var(--header-border-color)]"></div>
 
-    <div class="max-w-[1120px] w-full mx-auto flex items-center justify-between px-4 py-4">
-        <div class="text-xl font-bold">
-            <a href="index.html"><img src="images/corten-freight-logo.svg" alt="corten freight logo" /></a>
+
+    <header class="relative bg-white shadow-md sticky top-0  z-[31] md:pt-2">
+        <!-- Top border bar, only visible from md and up -->
+        <div class="hidden md:block absolute top-0 left-0 w-full h-2 bg-[var(--header-border-color)]"></div>
+
+        <div
+            class="max-w-[1120px] w-full mx-auto flex items-center justify-between px-[var(--header-px)] py-[var(--header-py)]  md:py-[var(--header-md-py)]">
+
+            <a href="index.html" class="w-[var(--logo-w)]"><img src="images/corten-freight-logo.svg"
+                    alt="corten freight logo" /></a>
+
+            <!-- <button
+                class=" md:flex bg-orange-500 text-white text-sm px-4 py-2 rounded-lg request-quote-btn md:justify-end md:hidden md:right-0 md:top-0">
+                Request a Quote 111
+            </button> -->
+            <div class="flex justify-end md:hidden absolute right-[92px]">
+            <button
+                class="bg-orange-500 text-white text-sm px-4 py-2 rounded-lg whitespace-nowrap">
+                Request a Quote 111
+            </button>
+            </div>
+            <div class="items-center justify-between flex w-full">
+                <!-- Desktop Nav -->
+                <nav id="mobile-menu" class="fixed md:relative top-0 left-0 w-full  bg-[var(--mobile--bg-color)] bg-opacity-95 z-40 overflow-hidden transition-all duration-300 
+        max-h-0 md:max-h-none opacity-0 md:opacity-100 md:flex  md:text-sm 
+         md:font-medium md:bg-transparent">
+                    <div
+                        class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 py-12 md:py-0 
+                        text-white text-lg font-medium md:gap-[var(--nav-gap)]  md:text-[var(--header-nav-color)] md:w-full md:ml-[-68px] md:h-[2.625rem]">
+                        <a href="our-services.html" class="hover:underline">Our Services</a>
+                        <a href="who-we-are.html" class="hover:underline">Who We Are</a>
+                        <a href="contact-us.html" class="hover:underline">Contact Us</a>
+                        <!-- CTA Button -->
+                        <button
+                            class=" md:flex bg-orange-500 text-white text-sm px-4 py-2 rounded-lg request-quote-btn md:absolute md:justify-end md:d-none md:right-0 md:top-0">
+                            Request a Quote
+                        </button>
+                    </div>
+                </nav>
+
+            </div>
+
+
+            <button id="mobile-menu-toggle"
+                class="mobile-menu-toggle md:hidden absolute outline-none focus-visible:outline-none z-50">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
         </div>
-
-        <!-- Desktop Nav -->
-        <nav class="hidden md:flex md:gap-[var(--nav-gap)] text-sm text-[var(--header-nav-color)] font-medium">
-            <a href="our-services.html" class="hover:underline">Our Services</a>
-            <a href="who-we-are.html" class="hover:underline">Who We Are</a>
-            <a href="contact-us.html" class="hover:underline">Contact Us</a>
-        </nav>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-toggle" class="md:hidden focus:outline-none ml-4">
-            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-
-        <!-- CTA Button -->
-        <button class="hidden md:block bg-orange-500 text-white text-sm px-4 py-2 rounded-lg request-quote-btn">
-            Request a Quote
-        </button>
-    </div>
-</header>
+    </header>
 
 
+    <!-- Mobile Menu Button -->
     <!-- Header ends here -->
 
     <!-- Mobile Nav -->

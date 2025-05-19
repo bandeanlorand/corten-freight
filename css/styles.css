@@ -15,6 +15,11 @@
   --main-blue-color: #064F88;
   --nav-gap:52px;
 
+
+  --header-md-py: 0.9380em;
+  --header-py: 0.6470em;
+  --header-px: 1.25em;
+  --logo-w:10.122em;
 }
 
 body,
@@ -85,7 +90,7 @@ p.text-sm {
     opacity: 1;
   }
 } */
-body.menu-open::before {
+body.menu-open::after {
   content: "";
   position: fixed;
   inset: 0;
@@ -107,15 +112,102 @@ header nav{
 }
 header nav a{
   /* color:#29323F; */
+}
+
+.mobile-menu-toggle{
+
+}
+.mobile-menu-toggle.menu-opened{
   
 }
+.mobile-menu-toggle {
+  width: 32px;
+  height: 26px;
+  position: absolute;
+  padding: 17px 0 0px 0px;
+  line-height: 100%;
+  margin: 0;
+  display: block;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out, outline 0s ease-in-out;
+  -moz-transition: .5s ease-in-out, outline 0s ease-in-out;
+  -o-transition: .5s ease-in-out, outline 0s ease-in-out;
+  transition: .5s ease-in-out, outline 0s ease-in-out;
+  cursor: pointer;
+  right: 20px !important;
+}
+
+.mobile-menu-toggle span{
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #2D293F;
+
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+.mobile-menu-toggle.menu-opened span{
+  background: #ffffff;
+}
+.mobile-menu-toggle span:nth-child(1) {
+  top: 2px;
+}
+
+.mobile-menu-toggle span:nth-child(2),.mobile-menu-toggle span:nth-child(3) {
+  top: 11px;
+}
+
+.mobile-menu-toggle span:nth-child(4) {
+  top: 20px;
+}
+
+.mobile-menu-toggle.menu-opened span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.mobile-menu-toggle.menu-opened span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.mobile-menu-toggle.menu-opened span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.mobile-menu-toggle.menu-opened span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
 /* header styles ends here */
 
 .cta-header {
   /* opacity: 0.95%; */
   background-color: rgba(48, 152, 231, 0.95);
 }
-
+#mobile-menu-toggle{
+  right: 10px;
+}
 
 
 /* hero bg images and styles starts here */

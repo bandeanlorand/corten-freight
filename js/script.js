@@ -1,42 +1,75 @@
 /* script for mobile menu ends here */
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById('mobile-menu-toggle');
-    const menuClose = document.getElementById('close-menu');
     const menu = document.getElementById('mobile-menu');
     const body = document.body;
 
-    function closeMenu() {
-        body.classList.remove('menu-open');
-        menu.classList.add('opacity-0');
-        menu.style.maxHeight = '0px';
-        menu.addEventListener('transitionend', function handler() {
-            menu.classList.add('invisible');
-            menu.removeEventListener('transitionend', handler);
+    function openMenu() {
+        body.classList.add('menu-open');
+        menuToggle.classList.add('menu-opened');
+
+        menu.classList.remove('opacity-0', 'max-h-0', 'pointer-events-none');
+
+        requestAnimationFrame(() => {
+            menu.classList.add('opacity-100');
+            menu.style.maxHeight = menu.scrollHeight + 'px'; // For animation
         });
     }
 
-    if (menuToggle && menuClose && menu) {
-        // Open mobile menu
-        menuToggle.addEventListener('click', () => {
-            body.classList.add('menu-open');
-            menu.classList.remove('invisible', 'opacity-0', 'max-h-0');
-            menu.classList.add('opacity-100');
-            menu.style.maxHeight = menu.scrollHeight + 'px';
-        });
+    function closeMenu() {
+        body.classList.remove('menu-open');
+        menuToggle.classList.remove('menu-opened');
 
-        // Close mobile menu
-        menuClose.addEventListener('click', () => {
-            closeMenu();
-        });
+        menu.classList.remove('opacity-100');
+        menu.classList.remove('pointer-events-none');
+        menu.classList.add('opacity-0');
+        menu.style.maxHeight = '0px';
 
-        // Close on resize if window exceeds 768px
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768 && menu.classList.contains('opacity-100')) {
+        // Re-disable interaction after fade-out
+        setTimeout(() => {
+            // menu.classList.add('pointer-events-none');
+        }, 300); // match your transition duration
+    }
+
+    if (menuToggle && menu) {
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // prevent bubbling to document
+            const isOpen = menuToggle.classList.contains('menu-opened');
+            if (isOpen) {
                 closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        // Close menu when clicking outside of it
+        document.addEventListener('click', (e) => {
+            const isClickInsideMenu = menu.contains(e.target);
+            const isToggleButton = menuToggle.contains(e.target);
+            if (!isClickInsideMenu && !isToggleButton && menuToggle.classList.contains('menu-opened')) {
+                closeMenu();
+            }
+        });
+
+        // Close on resize beyond mobile breakpoint
+        // window.addEventListener('resize', () => {
+        //     if (window.innerWidth > 768 && menuToggle.classList.contains('menu-opened')) {
+        //         closeMenu();
+        //     }
+        // });
+
+        // Close on resize beyond mobile breakpoint
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+                menu.classList.remove('pointer-events-none');
+                menu.style.maxHeight = ''; // remove inline max-height on desktop
             }
         });
     }
 });
+
+
 /* script for mobile menu ends here */
 
 /* script for paralax effect starts here */
