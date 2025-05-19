@@ -14,12 +14,15 @@
   --footer-background-color: #1A5C8E;
   --main-blue-color: #064F88;
   --nav-gap:52px;
+  --nav-gap-mobile:60px;
 
 
-  --header-md-py: 0.9380em;
+  --header-md-py: 0.8380em;
   --header-py: 0.6470em;
   --header-px: 1.25em;
   --logo-w:10.122em;
+
+  --orange:#EA6C31;
 }
 
 body,
@@ -101,6 +104,15 @@ body.menu-open::after {
 section {
   z-index: 1;
 }
+
+
+
+.request-quote-btn{
+
+}
+
+
+
 
 /* header styles starts here */
 header{

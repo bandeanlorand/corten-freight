@@ -5,31 +5,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
 
     function openMenu() {
-        body.classList.add('menu-open');
-        menuToggle.classList.add('menu-opened');
+    body.classList.add('overflow-hidden');
+    menuToggle.classList.add('menu-opened');
 
-        menu.classList.remove('opacity-0', 'max-h-0', 'pointer-events-none');
+    menu.classList.remove('opacity-0', 'max-h-0', 'pointer-events-none');
 
-        requestAnimationFrame(() => {
-            menu.classList.add('opacity-100');
-            menu.style.maxHeight = menu.scrollHeight + 'px'; // For animation
-        });
-    }
+    requestAnimationFrame(() => {
+        menu.classList.add('opacity-100');
+
+        // Get full height
+        const contentHeight = menu.scrollHeight;
+        const windowHeight = window.innerHeight;
+
+        // If content is smaller than screen, animate to content height
+        if (contentHeight < windowHeight) {
+            menu.style.maxHeight = contentHeight + 'px';
+        } else {
+            // If taller than screen, allow scroll
+            menu.style.maxHeight = windowHeight + 'px'; // OR leave it empty: ''
+            menu.classList.add('overflow-y-auto');
+        }
+    });
+}
+
 
     function closeMenu() {
-        body.classList.remove('menu-open');
-        menuToggle.classList.remove('menu-opened');
+    body.classList.remove('overflow-hidden');
+    menuToggle.classList.remove('menu-opened');
 
-        menu.classList.remove('opacity-100');
-        menu.classList.remove('pointer-events-none');
-        menu.classList.add('opacity-0');
-        menu.style.maxHeight = '0px';
-
-        // Re-disable interaction after fade-out
-        setTimeout(() => {
-            // menu.classList.add('pointer-events-none');
-        }, 300); // match your transition duration
-    }
+    menu.classList.remove('opacity-100');
+    menu.classList.add('opacity-0');
+    menu.style.maxHeight = '0px';
+    menu.classList.remove('overflow-y-auto');
+}
 
     if (menuToggle && menu) {
         menuToggle.addEventListener('click', (e) => {
