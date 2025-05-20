@@ -30,6 +30,11 @@
   --section-border-bottom-color:#D7E6F1;
   --require-star-red:#C90606;
   --form-link-text-color:#0067E5;
+  --submit-btn-bg-blue:#008CFF;
+}
+
+.font-Merriweather-Sans {
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 body,
