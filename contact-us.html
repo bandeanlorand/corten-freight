@@ -69,26 +69,6 @@
     </header>
     <!-- Header ends here -->
 
-    <!-- Mobile Nav -->
-    <div id="mobile-menu"
-        class="fixed top-0 left-0 w-full  bg-[var(--mobile--bg-color)] bg-opacity-95 z-40 overflow-hidden transition-all duration-300 max-h-0 opacity-0 ">
-        <div class="flex flex-col items-center justify-center space-y-6 py-12 text-white text-lg font-medium">
-            <button id="close-menu" class="absolute top-6 right-6">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-            <a href=" our-services.html" class="hover:underline">Our Services</a>
-            <a href="who-we-are.html" class="hover:underline active">Who We Are</a>
-            <a href="javascript:void(0);" class="hover:underline">Contact Us</a>
-            <a href="#quote"
-                class="bg-white text-blue-600 px-4 py-2 rounded-[4px]   border hover:bg-blue-600 hover:text-white transition request-quote-btn">Request
-                a Quote</a>
-        </div>
-    </div>
-
-    <!-- --header-cta-bg-color -->
-
 
     <!-- Hero -->
     <section class="hero-bg contact-us relative bg-cover bg-center bg-no-repeat bg-fixed text-center px-6 py-24 min-h-[480px] md:min-h-[640px] flex 
@@ -105,59 +85,65 @@
     </section>
 
 
-<!-- Trust Section -->
-    <section id="services" class="py-16 px-6 text-center bg-[var(--section-top-bg-color)]">
-        <h2 class="text-xl font-normal mb-4 text-white">Get in Touch with Corten Freight</h2>
-        <p class="max-w-2xl mx-auto text-sm text-white mb-10">
-            We’re eager to discuss your logistics needs and explore how Corten Freight can support your business growth.</p>
-
-        <p class="max-w-2xl mx-auto text-sm text-white mb-10">We pride ourselves on clear communication, proactive
-            Share your details below, and a dedicated team member will reach out promptly.</p>
-
+    <!-- Section below hero - starts here -->
+    <section id="services" class="py-16 px-[40px] md:py-[60px] text-center bg-[var(--section-top-bg-color)]">
+        <div class="max-w-[640px] mx-auto  mb-[1.25rem]">
+            <h2
+                class="font-normal mb-4 text-white text-[1.75rem] md:text-[2rem] leading-[2.5rem] md:leading-[2.75rem] font-light">
+               Your Trusted Freight Brokerage Partner</h2>
+            <p class="max-w-2xl mx-auto text-white text-[1rem] leading-[1.625rem] md:leading-[1.75rem] font-light">
+                We’re eager to discuss your logistics needs and explore how Corten Freight can support your business growth.
+            </p>
+            <p class="max-w-2xl mx-auto text-white text-[1rem] leading-[1.625rem] md:leading-[1.75rem] font-light">
+            We pride ourselves on clear communication, proactive
+            Share your details below, and a dedicated team member will reach out promptly.
+            </p>
+        </div>
     </section>
-
+    <!-- Section below hero - ends here -->
 
 <!-- Start of Contact Us Section -->
-<section id="contact" class="bg-blue-50 py-16 px-6 text-center text-slate-800">
+<section id="contact" class="border-b border-b-[1px] bg-[var(--section-blue-bg-color)] border-b-[var(--section-border-bottom-color)] py-16 px-6 text-center text-slate-800 px-[40px] pb-[62px] pt-[40px] md:px-[60px] md:pt-[60px]">
   
 
-  <h3 class="text-xl font-semibold text-blue-700 mb-4">Request a Personalized Consultation</h3>
-  <p class="text-sm max-w-xl mx-auto mb-6">
+  <h3 class="font-normal mb-4 text-[var(--blue-title-text)] text-[1.75rem] md:text-[2rem] leading-[2.5rem] md:leading-[2.75rem] font-light">Request a Personalized Consultation</h3>
+  <p class="text-sm max-w-[720px] mx-auto mb-6">
     Fill in your contact information and a brief description of your logistics requirements.<br>
     We’ll review your details and connect with tailored solutions designed specifically for your business.
   </p>
+  <p class="text-sm max-w-[720px] mx-auto mb-6">Fields marked with an <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub> are required.</pp>
 
-  <form action="https://formcarry.com/s/aVYiV3KXLvw" method="POST" class="max-w-3xl mx-auto text-left bg-white p-8 rounded-[4px]   shadow-md">
-    <div class="grid md:grid-cols-2 gap-4">
+  <form action="https://formcarry.com/s/aVYiV3KXLvw" method="POST" class="max-w-3xl mx-auto text-left max-w-[489px] contact-us">
+    <div class="grid md:grid-cols-2 gap-2">
       <div>
-        <label class="block text-sm font-medium">First Name *</label>
-        <input type="text" name="First Name" required class="w-full border px-3 py-2 rounded">
+        <label class="block">First Name <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
+        <input type="text" name="First Name" required class="w-full border px-2 py-1">
       </div>
       <div>
-        <label class="block text-sm font-medium">Last Name *</label>
-        <input type="text" name="Last Name" required class="w-full border px-3 py-2 rounded">
+        <label class="block">Last Name <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
+        <input type="text" name="Last Name" required class="w-full border px-2 py-1">
       </div>
       <div class="md:col-span-2">
-        <label class="block text-sm font-medium">Company *</label>
-        <input type="text" name="Company" required class="w-full border px-3 py-2 rounded">
+        <label class="block">Company <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
+        <input type="text" name="Company" required class="w-full border px-2 py-1">
       </div>
-      <div>
-        <label class="block text-sm font-medium">Email *</label>
-        <input type="email" name="Email" required class="w-full border px-3 py-2 rounded">
+      <div class="md:col-span-2 md:max-w-[400px]">
+        <label class="block">Email <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
+        <input type="email" name="Email" required class="w-full border px-2 py-1">
       </div>
-      <div>
-        <label class="block text-sm font-medium">Phone Number *</label>
-        <input type="tel" name="Phone Number" required class="w-full border px-3 py-2 rounded">
+      <div class="md:col-span-2 md:max-w-[400px]">
+        <label class="block">Phone Number <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
+        <input type="tel" name="Phone Number" required class="w-full border px-2 py-1">
       </div>
       <div class="md:col-span-2">
-        <label class="block text-sm font-medium">Message</label>
-        <textarea name="Message" rows="4" class="w-full border px-3 py-2 rounded"></textarea>
+        <label class="block">Message</label>
+        <textarea name="Message" rows="4" class="w-full border px-2 py-1"></textarea>
       </div>
     </div>
 
-    <div class="mt-4 flex items-start gap-2">
-      <input type="checkbox" required name="agree" class="mt-1">
-      <label class="text-sm">I agree to Corten Freight’s <a href="#" class="underline text-blue-600">Terms of Use</a> and <a href="#" class="underline text-blue-600">Privacy Policy</a>.</label>
+    <div class="mt-4 flex items-start gap-2 justify-start items-center font-bold">
+      <input type="checkbox" required name="agree" class="mt-0">
+      <label class="text-[10px] pb-0 font-bold">I agree to Corten Freight’s <a href="#" class="underline text-[var(--form-link-text-color)] no-underline">Terms of Use</a> and <a href="#" class="underline text-[var(--form-link-text-color)] no-underline">Privacy Policy</a>.</label>
     </div>
 
     <div class="text-center mt-6">
@@ -167,7 +153,7 @@
 </section>
 
 <!-- Calendly & Immediate Assistance Section -->
-<section class="bg-blue-100 py-16 px-6 text-center text-slate-800">
+<section class="bg-[var(--section-blue-bg-color)] border-b-[var(--section-border-bottom-color)] py-16 px-6 text-center text-slate-800">
   <div class="max-w-3xl mx-auto">
     <h3 class="text-xl font-semibold mb-4">Schedule a Meeting Directly</h3>
     <p class="mb-6 text-sm">Prefer to speak with us right away? Use the link below to select a convenient time for a one-on-one discussion:</p>
@@ -261,80 +247,80 @@
                 <!-- First + Last Name -->
                 <div class="flex flex-col md:flex-row md:gap-4">
                     <div class="w-full">
-                        <label class="block text-sm font-medium">First Name <span class="text-red-500">*</span></label>
-                        <input type="text" name="First Name" required class="w-full border px-3 py-2 rounded">
+                        <label class="block">First Name <span class="text-red-500"><sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></span></label>
+                        <input type="text" name="First Name" required class="w-full border px-2 py-1">
                     </div>
                     <div class="w-full">
-                        <label class="block text-sm font-medium">Last Name <span class="text-red-500">*</span></label>
-                        <input type="text" name="Last Name" required class="w-full border px-3 py-2 rounded">
+                        <label class="block">Last Name <span class="text-red-500"><sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></span></label>
+                        <input type="text" name="Last Name" required class="w-full border px-2 py-1">
                     </div>
                 </div>
 
                 <!-- Company -->
                 <div>
-                    <label class="block text-sm font-medium">Company <span class="text-red-500">*</span></label>
-                    <input type="text" name="Company" required class="w-full border px-3 py-2 rounded">
+                    <label class="block">Company <span class="text-red-500"><sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></span></label>
+                    <input type="text" name="Company" required class="w-full border px-2 py-1">
                 </div>
 
                 <!-- Phone + Email -->
                 <div class="flex flex-col md:flex-row md:gap-4">
                     <div class="w-full">
-                        <label class="block text-sm font-medium">Phone Number <span
-                                class="text-red-500">*</span></label>
+                        <label class="block">Phone Number <span
+                                class="text-red-500"><sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></span></label>
                         <input type="tel" name="Phone Number" pattern="[0-9\-+\s]+" required
-                            class="w-full border px-3 py-2 rounded">
+                            class="w-full border px-2 py-1">
                     </div>
                     <div class="w-full">
-                        <label class="block text-sm font-medium">Email <span class="text-red-500">*</span></label>
-                        <input type="email" name="Email" required class="w-full border px-3 py-2 rounded">
+                        <label class="block">Email <span class="text-red-500"><sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></span></label>
+                        <input type="email" name="Email" required class="w-full border px-2 py-1">
                     </div>
                 </div>
 
                 <!-- Origin + Destination -->
                 <div class="flex flex-col md:flex-row md:gap-4">
                     <div class="w-full">
-                        <label class="block text-sm font-medium">Origin (City/State/Province/Zip) <span
-                                class="text-red-500">*</span></label>
-                        <input type="text" name="Origin" required class="w-full border px-3 py-2 rounded">
+                        <label class="block">Origin (City/State/Province/Zip) <span
+                                class="text-red-500"><sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></span></label>
+                        <input type="text" name="Origin" required class="w-full border px-2 py-1">
                     </div>
                     <div class="w-full">
-                        <label class="block text-sm font-medium">Destination (City/State/Province/Zip) <span
-                                class="text-red-500">*</span></label>
-                        <input type="text" name="Destination" required class="w-full border px-3 py-2 rounded">
+                        <label class="block">Destination (City/State/Province/Zip) <span
+                                class="text-red-500"><sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></span></label>
+                        <input type="text" name="Destination" required class="w-full border px-2 py-1">
                     </div>
                 </div>
 
                 <!-- Equipment -->
                 <div class="flex flex-col md:flex-row md:gap-4">
                     <div class="w-full">
-                        <label class="block text-sm font-medium">Equipment Type <span
-                                class="text-red-500">*</span></label>
-                        <input type="text" name="Equipment Type" required class="w-full border px-3 py-2 rounded">
+                        <label class="block">Equipment Type <span
+                                class="text-red-500"><sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></span></label>
+                        <input type="text" name="Equipment Type" required class="w-full border px-2 py-1">
                     </div>
                     <div class="w-full">
-                        <label class="block text-sm font-medium">Equipment Size <span
-                                class="text-red-500">*</span></label>
-                        <input type="text" name="Equipment Size" required class="w-full border px-3 py-2 rounded">
+                        <label class="block">Equipment Size <span
+                                class="text-red-500"><sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></span></label>
+                        <input type="text" name="Equipment Size" required class="w-full border px-2 py-1">
                     </div>
                 </div>
 
                 <!-- Optional Fields -->
                 <div class="flex flex-col md:flex-row md:gap-4">
                     <div class="w-full">
-                        <label class="block text-sm font-medium">Commodity</label>
-                        <input type="text" name="Commodity" class="w-full border px-3 py-2 rounded">
+                        <label class="block">Commodity</label>
+                        <input type="text" name="Commodity" class="w-full border px-2 py-1">
                     </div>
                     <div class="w-full">
-                        <label class="block text-sm font-medium">Weight</label>
-                        <input type="text" name="Weight" class="w-full border px-3 py-2 rounded">
+                        <label class="block">Weight</label>
+                        <input type="text" name="Weight" class="w-full border px-2 py-1">
                     </div>
                 </div>
 
                 <!-- Details -->
                 <div>
-                    <label class="block text-sm font-medium">Additional Freight / Shipment Details <span
-                            class="text-red-500">*</span></label>
-                    <textarea name="Details" rows="3" required class="w-full border px-3 py-2 rounded"></textarea>
+                    <label class="block">Additional Freight / Shipment Details <span
+                            class="text-red-500"><sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></span></label>
+                    <textarea name="Details" rows="3" required class="w-full border px-2 py-1"></textarea>
                 </div>
 
                 <!-- Agreement Checkbox -->

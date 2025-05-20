@@ -23,8 +23,13 @@
   --logo-w:10.122em;
 
   --orange:#EA6C31;
-
+  --circle-blue:#1C78C3;
+  --blue-title-text:#1C78C3;
   --section-light-blue:#E7F1FB;
+  --section-blue-bg-color:#E8F5FF;
+  --section-border-bottom-color:#D7E6F1;
+  --require-star-red:#C90606;
+  --form-link-text-color:#0067E5;
 }
 
 body,
@@ -430,4 +435,11 @@ form input{
   font-size: 0.75rem;
   line-height: 1.38rem;
   font-weight: 200;
+}
+
+form.contact-us label{
+  padding-bottom: 11px;
+}
+form.contact-us label.pb-0{
+  padding-bottom: 0;
 }

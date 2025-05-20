@@ -206,14 +206,13 @@
         </div>
     </section>
 
-     
-
+    
     <!-- Footer starts here -->
     <footer class=" text-white px-6 py-[60px] md:pb-[32px] bg-[var(--footer-background-color)]">
         <!-- <div class="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left"> -->
         <div class="max-w-[1120px] mx-auto grid grid-cols-1 md:grid-cols-6 gap-8 text-center md:text-left items-start">
             <!-- Column 1: Logo & CTA -->
-            <div class="md:col-span-2 xl:mr-[20%]"">
+            <div class="md:col-span-2 xl:mr-[20%]">
                 <a href=" ../index.html" class="block mx-auto md:ml-0 w-fit mb-[30px] md:mb-[32px]">
                 <img src="images/corten-freight-logo-white.svg" alt="corten freight logo" class="mx-auto">
                 </a>
@@ -266,18 +265,18 @@
                 <!-- First + Last Name -->
                 <div class="flex flex-col md:flex-row md:gap-3">
                     <div class="w-full">
-                        <label class="block">First Name <span class="text-red-500">*</span></label>
+                        <label class="block">First Name <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
                         <input type="text" name="First Name" required class="w-full border px-2 py-1">
                     </div>
                     <div class="w-full">
-                        <label class="block">Last Name <span class="text-red-500">*</span></label>
+                        <label class="block">Last Name <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
                         <input type="text" name="Last Name" required class="w-full border px-2 py-1">
                     </div>
                 </div>
 
                 <!-- Company -->
                 <div>
-                    <label class="block">Company <span class="text-red-500">*</span></label>
+                    <label class="block">Company <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
                     <input type="text" name="Company" required class="w-full border px-2 py-1 md:max-w-[90%]">
                 </div>
 
@@ -290,7 +289,7 @@
                             class="w-full border px-2 py-1">
                     </div>
                     <div class="w-full">
-                        <label class="block">Email <span class="text-red-500">*</span></label>
+                        <label class="block">Email <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
                         <input type="email" name="Email" required class="w-full border px-2 py-1">
                     </div>
                 </div>
@@ -312,13 +311,11 @@
                 <!-- Equipment -->
                 <div class="flex flex-col md:flex-row md:gap-3">
                     <div class="w-full">
-                        <label class="block">Equipment Type <span
-                                class="text-red-500">*</span></label>
+                        <label class="block">Equipment Type <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
                         <input type="text" name="Equipment Type" required class="w-full border px-2 py-1">
                     </div>
                     <div class="w-full">
-                        <label class="block">Equipment Size <span
-                                class="text-red-500">*</span></label>
+                        <label class="block">Equipment Size <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
                         <input type="text" name="Equipment Size" required class="w-full border px-2 py-1">
                     </div>
                 </div>
@@ -337,8 +334,7 @@
 
                 <!-- Details -->
                 <div>
-                    <label class="block">Additional Freight / Shipment Details <span
-                            class="text-red-500">*</span></label>
+                    <label class="block">Additional Freight / Shipment Details <sub class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
                     <textarea name="Details" rows="3" required class="w-full border px-2 py-1"></textarea>
                 </div>
 
