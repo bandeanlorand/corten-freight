@@ -304,10 +304,12 @@
             <div id="thank-you-message" class="hidden text-center text-green-600 font-semibold text-lg py-8">
                 Thank you! Your request has been submitted successfully.
             </div>
-            <form action="https://formcarry.com/s/aVYiV3KXLvw" method="POST" id="quote-form" class="space-y-2">
-
-                <!-- Spam prevention -->
-                <!-- <input name="_formsubmit_id" type="text" style="display:none"> -->
+            <form action="https://formsubmit.co/bandeanlori@gmail.com" method="POST" id="quote-form" class="space-y-2">
+                <!-- FormSubmit Config -->
+                <input type="hidden" name="_subject" value="New Quote Request from Corten Freight" />
+                <input type="hidden" name="_next" value="https://cortenfreight.com/thank-you.html" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
 
                 <!-- First + Last Name -->
                 <div class="flex flex-col md:flex-row md:gap-3">
@@ -340,7 +342,7 @@
                     <div class="w-full">
                         <label class="block">Email <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="email" name="Email" required class="w-full border px-2 py-1">
+                        <input type="email" name="email" required class="w-full border px-2 py-1">
                     </div>
                 </div>
 
@@ -392,22 +394,20 @@
                 </div>
 
                 <!-- Agreement Checkbox -->
-                <div style="align-items: center;" class="flex items-center gap-2">
-                    <input type="checkbox" id="agree" name="I Agree to Terms" required="" class="mt-0">
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="agree" name="I Agree to Terms" required class="mt-0">
                     <label for="agree" class="text-[0.625rem]">
                         I agree to Corten Freight's <a href="#" class="text-blue-600 underline">Terms of Use</a> and
                         <a href="#" class="text-blue-600 underline">Privacy Policy</a>
                     </label>
                 </div>
 
-                <!-- Optional Redirect -->
-                <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thank-you.html" /> -->
-
                 <!-- Submit -->
                 <div class="text-center">
                     <button type="submit"
-                        class="bg-[var(--orange)] hover:bg-[var(--orange-hover)] active:scale-95 text-white px-10 py-2 text-center bloc rounded-[4px] request-quote-btn text-[1.25rem] leading-[2rem] mt-[1.5rem]">Get
-                        Quote</button>
+                        class="bg-[var(--orange)] hover:bg-[var(--orange-hover)] active:scale-95 text-white px-10 py-2 text-center bloc rounded-[4px] request-quote-btn text-[1.25rem] leading-[2rem] mt-[1.5rem]">
+                        Get Quote
+                    </button>
                 </div>
             </form>
         </div>
