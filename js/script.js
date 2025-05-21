@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /* script for paralax effect starts here */
 document.addEventListener("DOMContentLoaded", function () {
     const parallaxSectionsTop = document.querySelectorAll('.hero-bg');
-    const parallaxSections = document.querySelectorAll('.home-middle-image-section, .home-bottom-image-section');
+    const parallaxSections = document.querySelectorAll('.home-middle-image-section, .home-bottom-image-section, .our-services-bottom-image-section');
 
     function getSpeed(type) {
         const width = window.innerWidth;
@@ -152,25 +152,142 @@ document.addEventListener("DOMContentLoaded", function () {
 //     });
 // });
 
+// document.addEventListener('DOMContentLoaded', () => {
+//     const modal = document.getElementById('quote-modal');
+//     const modalBox = document.getElementById('quote-box');
+//     const body = document.body;
+//     const form = document.getElementById('quote-form');
+//     const thankYouMessage = document.getElementById('thank-you-message');
+//     const openBtns = document.querySelectorAll('.request-quote-btn');
+//     const closeBtn = document.getElementById('close-modal-btn');
+
+//     openBtns.forEach(btn => {
+//         btn.addEventListener('click', () => {
+//             modal.classList.remove('hidden');
+//             modal.classList.add('flex');
+//             modal.classList.remove('overlay-hidden');
+//             modal.classList.add('overlay-visible');
+
+//             setTimeout(() => {
+//                 modalBox.classList.remove('modal-hidden');
+//                 modalBox.classList.add('modal-visible');
+//             }, 100); // small delay for overlay to appear first
+
+//             body.classList.add('body-modal-open');
+//         });
+//     });
+
+//     function closeModal() {
+//         modalBox.classList.remove('modal-visible');
+//         modalBox.classList.add('modal-hidden');
+
+//         modal.classList.remove('overlay-visible');
+//         modal.classList.add('overlay-hidden');
+
+//         setTimeout(() => {
+//             modal.classList.remove('flex');
+//             modal.classList.add('hidden');
+//             body.classList.remove('body-modal-open');
+//         }, 250); // faster close
+//     }
+
+//     modal.addEventListener('click', (e) => {
+//         if (e.target === modal) {
+//             closeModal();
+//         }
+//     });
+
+//     closeBtn.addEventListener('click', closeModal);
+
+//     form.addEventListener('submit', async (e) => {
+//         e.preventDefault();
+
+//         if (!form.agree.checked) {
+//             alert('You must agree to the terms.');
+//             return;
+//         }
+
+//         const formData = new FormData(form);
+
+//         try {
+//             const res = await fetch(form.action, {
+//                 method: "POST",
+//                 body: formData,
+//                 headers: {
+//                     'Accept': 'application/json'
+//                 }
+//             });
+
+//             if (res.ok) {
+//                 form.classList.add('hidden');
+//                 thankYouMessage.classList.remove('hidden');
+
+//                 setTimeout(() => {
+//                     closeModal();
+//                     form.reset();
+//                     form.classList.remove('hidden');
+//                     thankYouMessage.classList.add('hidden');
+//                 }, 5000);
+//             } else {
+//                 alert("There was an error submitting the form.");
+//                 console.error(await res.text());
+//             }
+//         } catch (error) {
+//             alert("An unexpected error occurred.");
+//             console.error(error);
+//         }
+//     });
+// });
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('quote-modal');
+    const modalBox = document.getElementById('quote-box');
     const body = document.body;
     const form = document.getElementById('quote-form');
     const thankYouMessage = document.getElementById('thank-you-message');
+    const openBtns = document.querySelectorAll('.request-quote-btn');
+    const closeBtn = document.getElementById('close-modal-btn');
 
-    document.querySelectorAll('.request-quote-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            body.classList.add('body-modal-open');
-        });
+    openBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modal.classList.remove('overlay-hidden');
+        modal.classList.add('overlay-visible');
+
+        // Make transition actually apply even on first open
+        setTimeout(() => {
+            modalBox.classList.remove('modal-hidden');
+            modalBox.classList.add('modal-visible');
+        }, 100);
+
+        body.classList.add('body-modal-open');
     });
+});
+
+
+    function closeModal() {
+        modalBox.classList.remove('modal-visible');
+        modalBox.classList.add('modal-hidden');
+
+        modal.classList.remove('overlay-visible');
+        modal.classList.add('overlay-hidden');
+
+        setTimeout(() => {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            body.classList.remove('body-modal-open');
+        }, 250); // faster close
+    }
 
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeModal();
         }
     });
+
+    closeBtn.addEventListener('click', closeModal);
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -210,13 +327,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(error);
         }
     });
-
-    function closeModal() {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        body.classList.remove('body-modal-open');
-    }
 });
+
+
 
 
 /* script for mobile ends here */
@@ -264,3 +377,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Scroll Button at Bottom script ends here
+
+
+
+document.querySelectorAll('a[href]').forEach(link => {
+    const loader = document.getElementById('page-loader');
+    link.addEventListener('click', function (e) {
+      const url = this.getAttribute('href');
+      if (!url.startsWith('#') && !url.startsWith('mailto:') && !url.startsWith('tel:')) {
+        e.preventDefault();
+        loader.style.display = 'flex';
+        loader.classList.remove('opacity-0');
+        setTimeout(() => {
+          window.location.href = url;
+        }, 200); // small delay for effect
+      }
+    });
+  });

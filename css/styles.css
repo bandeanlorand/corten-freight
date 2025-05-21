@@ -23,6 +23,8 @@
   --logo-w:10.122em;
 
   --orange:#EA6C31;
+  --orange-hover:#d85c22;
+  --footer-btn-hover:#0a4775;
   --circle-blue:#1C78C3;
   --blue-title-text:#1C78C3;
   --section-light-blue:#E7F1FB;
@@ -286,12 +288,12 @@ header nav a{
   background-size: cover;
   background-position: center;
   /* Remove background-attachment: fixed */
-  ;
+  
 }
 
 @media (min-width: 768px) {
-  .home-midbottomdle-image-section {
-    background-image: url('/images/home-section-port-shipp-desktop-1440-up.jpg');
+  .home-bottom-image-section{
+    background-image: url('../images/home-section-port-shipp-desktop-1440-up.jpg');
   }
 }
 
@@ -328,7 +330,7 @@ header nav a{
 
 
 /* our services middle bg images with port and containers container section and styles starts here */
-.home-bottom-image-section {
+.our-services-bottom-image-section{
   background-image: url('../images/our-services-section-port-desktop-1440-up.jpg');
   background-size: cover;
   background-position: center;
@@ -337,13 +339,13 @@ header nav a{
 }
 
 @media (min-width: 768px) {
-  .home-midbottomdle-image-section {
-    background-image: url('/images/hour-services-section-port-desktop-1440-up.jpg');
+  .our-services-bottom-image-section {
+    background-image: url('/images/our-services-section-port-desktop-1440-up.jpg');
   }
 }
 
 @media (min-width: 1024px) {
-  .home-bottom-image-section {
+  .our-services-bottom-image-section {
     background-image: url('../images/our-services-section-port-desktop-1440-up.jpg');
   }
 }
@@ -422,7 +424,9 @@ header nav a{
   }
 }
 
-
+button,a{
+  transition: ease-in-out 0.15s all;
+}
 /* scroll to bottom button styles ends here */
 form{
   /* font-family: "Merriweather Sans", sans-serif; */
@@ -448,3 +452,42 @@ form.contact-us label{
 form.contact-us label.pb-0{
   padding-bottom: 0;
 }
+
+/* modal appear styling - starts here */
+.modal-visible {
+        opacity: 1 !important;
+        transform: scale(1) !important;
+    }
+
+    .modal-hidden {
+        opacity: 0 !important;
+        transform: scale(0.95) !important;
+    }
+
+    .overlay-visible {
+        opacity: 1 !important;
+    }
+
+    .overlay-hidden {
+        opacity: 0 !important;
+    }
+/* modal appear styling - ends here */
+
+a.active{
+  font-weight: bold;
+}
+
+/* page load fallback effect - starts here */
+ .animate-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+/* page load fallback effect - ends here */
