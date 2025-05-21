@@ -267,6 +267,43 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.querySelector('.contact-us');
+  const thankYouContact = document.getElementById('thank-you-contact');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (res.ok) {
+          contactForm.reset();
+          thankYouContact.classList.remove('hidden');
+        } else {
+          alert('Something went wrong. Please try again later.');
+          console.error(await res.text());
+        }
+      } catch (err) {
+        alert('An error occurred while submitting the form.');
+        console.error(err);
+      }
+    });
+  }
+});
+
+
+
+
     function closeModal() {
         modalBox.classList.remove('modal-visible');
         modalBox.classList.add('modal-hidden');
