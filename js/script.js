@@ -268,38 +268,67 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.querySelector('.contact-us');
-  const thankYouContact = document.getElementById('thank-you-contact');
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
+    const body = document.body;
+    const form = document.getElementById('contact-form');
+    const thankYouMessage = document.getElementById('thank-you-message');
+    const openBtns = document.querySelectorAll('.request-quote-btn');
+    const closeBtn = document.getElementById('close-modal-btn');
 
-      const formData = new FormData(contactForm);
+    openBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modal.classList.remove('overlay-hidden');
+        modal.classList.add('overlay-visible');
 
-      try {
-        const res = await fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
+        // Make transition actually apply even on first open
+        setTimeout(() => {
+            modalBox.classList.remove('modal-hidden');
+            modalBox.classList.add('modal-visible');
+        }, 100);
 
-        if (res.ok) {
-          contactForm.reset();
-          thankYouContact.classList.remove('hidden');
-        } else {
-          alert('Something went wrong. Please try again later.');
-          console.error(await res.text());
-        }
-      } catch (err) {
-        alert('An error occurred while submitting the form.');
-        console.error(err);
-      }
+        body.classList.add('body-modal-open');
     });
-  }
 });
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const contactForm = document.getElementById('contact-form');
+//   const thankYouContact = document.getElementById('thank-you-contact');
+
+//   if (contactForm && thankYouContact) {
+//     contactForm.addEventListener('submit', async (e) => {
+//       e.preventDefault();
+
+//       const formData = new FormData(contactForm);
+
+//       try {
+//         const res = await fetch(contactForm.action, {
+//           method: 'POST',
+//           body: formData,
+//           headers: {
+//             'Accept': 'application/json'
+//           }
+//         });
+
+//         if (res.ok) {
+//           contactForm.classList.add('hidden'); // optionally hide the form
+//           thankYouContact.classList.remove('hidden');
+//           thankYouContact.classList.add('block');
+//         } else {
+//           alert('Form submission failed. Please try again.');
+//           console.error(await res.text());
+//         }
+//       } catch (err) {
+//         alert('Network error. Please try again later.');
+//         console.error(err);
+//       }
+//     });
+//   }
+// });
+
+
 
 
 
