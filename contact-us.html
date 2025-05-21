@@ -152,16 +152,35 @@
         </p>
         <p class="text-sm max-w-[720px] mx-auto mb-6">Fields marked with an <sub
                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub> are required.
-            </pp>
+            </p>
 
-        <form action="https://formsubmit.co/bandeanlori@gmail.com" method="POST"
-      id ="contact-form" class="max-w-3xl mx-auto text-left max-w-[489px] contact-us">
 
-  <!-- FormSubmit Configuration -->
-  <input type="hidden" name="_subject" value="New Contact from Corten Freight" />
-                <input type="hidden" name="_next" value="https://bandeanlorand.github.io/corten-freight/" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
+            <!-- <form id="contact-form" method="POST" class="contact-us">
+  <input type="hidden" name="_subject" value="New Contact from Corten Freight">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+
+  <label>First Name *</label>
+  <input type="text" name="First Name" required class="border px-2 py-1 w-full"><br>
+
+  <label>Email *</label>
+  <input type="email" name="email" required class="border px-2 py-1 w-full"><br>
+
+  <button type="submit" class="bg-blue-500 text-white px-4 py-2 mt-4">Submit</button>
+</form>
+
+<div id="thank-you-contact" class="hidden text-green-600 font-semibold text-center mt-6">
+  Thank you! Your message has been submitted successfully.
+</div>
+ -->
+<form id="contact-form" method="POST"class="max-w-3xl mx-auto text-left max-w-[489px] contact-us">
+  <input type="hidden" name="_subject" value="New Contact from Corten Freight">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_captcha" value="false">
+
+
+ 
+
 
   <div class="grid md:grid-cols-2 gap-2">
     <div>
@@ -491,6 +510,39 @@
     </div>
     <!-- Modal ends here -->
     <script src="js/script.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contact-form');
+  const thankYouContact = document.getElementById('thank-you-contact');
+
+  if (contactForm && thankYouContact) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(contactForm);
+
+      try {
+        const res = await fetch('https://formsubmit.co/ajax/bandeanlori@gmail.com', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (res.ok) {
+          contactForm.reset();
+          contactForm.classList.add('hidden');
+          thankYouContact.classList.remove('hidden');
+        }
+      } catch (error) {
+        console.error('Submission failed:', error);
+      }
+    });
+  }
+});
+</script>
+
 </body>
 
 </html>
