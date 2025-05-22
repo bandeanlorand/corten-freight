@@ -238,20 +238,26 @@ header nav a{
 
 /* hero bg images and styles starts here */
 .hero-bg {
-  background-image: url('../images/home-main-hero-desktop-1440-up.jpg');
+  background-image: url('../images/home-main-hero-mobile-390.jpg');
   background-size: cover;
   background-position: center;
   /* Remove background-attachment: fixed */
   ;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 391px) {
   .hero-bg {
-    background-image: url('../images/home-main-hero-desktop-1440-up.jpg');
+    background-image: url('../images/home-main-hero-mobile-768.jpg');
   }
 }
 
 @media (min-width: 1024px) {
+  .hero-bg {
+    background-image: url('../images/home-main-hero-desktop-1024-up.jpg');
+  }
+}
+
+@media (min-width: 1441px) {
   .hero-bg {
     background-image: url('../images/home-main-hero-desktop-1440-up.jpg');
   }
@@ -261,43 +267,62 @@ header nav a{
 
 /* home middle image section and styles starts here */
 .home-middle-image-section {
-  background-image: url('../images/home-section-highway-truck-desktop-1440-up.jpg');
+  background-image: url('../images/home-section-highway-truck-mobile-390.jpg');
   background-size: cover;
+  
   background-position: center;
-  /* Remove background-attachment: fixed */
   ;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 391px) {
   .home-middle-image-section {
-    background-image: url('../images/home-section-highway-truck-desktop-1440-up.jpg');
+    background-image: url('../images/home-section-highway-truck-mobile-768.jpg');
+    background-size: cover;
+    background-size: auto 145%;
   }
 }
+
 
 @media (min-width: 1024px) {
   .home-middle-image-section {
     background-image: url('../images/home-section-highway-truck-desktop-1440-up.jpg');
+    background-size: 150% auto;
   }
 }
+@media (min-width: 1441px) {
+  .home-middle-image-section {
+    background-image: url('../images/home-section-highway-truck-desktop-1440-up.jpg');
+    background-size: cover;
+    background-size: 125% auto;
+  }
+  }
+
 
 /* home middle image section and styles ends here */
 
 /* home bottom image with ports and shipping container section and styles starts here */
 .home-bottom-image-section {
-  background-image: url('../images/home-section-port-shipp-desktop-1440-up.jpg');
+  background-image: url('../images/home-section-port-shipp-mobile-390.jpg');
   background-size: cover;
   background-position: center;
   /* Remove background-attachment: fixed */
   
 }
 
-@media (min-width: 768px) {
+@media (min-width: 391px) {
+  .home-bottom-image-section{
+    background-image: url('../images/home-section-port-shipp-desktop-1440-up.jpg');
+    background-size: 130% auto;
+  }
+}
+
+@media (min-width: 1024px) {
   .home-bottom-image-section{
     background-image: url('../images/home-section-port-shipp-desktop-1440-up.jpg');
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1441px) {
   .home-bottom-image-section {
     background-image: url('../images/home-section-port-shipp-desktop-1440-up.jpg');
   }
@@ -307,12 +332,19 @@ header nav a{
 
 /*  our services hero bg images and styles starts here */
 .hero-bg.our-services {
-  background-image: url('../images/our-services-main-hero-desktop-1440-up.jpg');
+  background-image: url('../images/our-services-main-hero-mobile-390.jpg');
   background-size: cover;
   background-position: center;
   /* Remove background-attachment: fixed */
   ;
 }
+
+@media (min-width: 391px) {
+  .hero-bg.our-services {
+    background-image: url('../images/our-services-main-hero-mobile-768.jpg');
+  }
+}
+
 
 @media (min-width: 768px) {
   .hero-bg.our-services {
@@ -340,7 +372,7 @@ header nav a{
 
 @media (min-width: 768px) {
   .our-services-bottom-image-section {
-    background-image: url('/images/our-services-section-port-desktop-1440-up.jpg');
+    background-image: url('../images/our-services-section-port-desktop-1440-up.jpg');
   }
 }
 
@@ -355,7 +387,7 @@ header nav a{
 
 /*  who we are hero bg images and styles starts here */
 .hero-bg.who-we-are {
-  background-image: url('../images/who-we-are-main-hero-desktop-1440-up.jpg');
+  background-image: url('../images/who-we-are-main-hero-mobile-390.jpg');
   background-size: cover;
   background-position: center;
   /* Remove background-attachment: fixed */

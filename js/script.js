@@ -74,13 +74,13 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
-});
+
 
 
 /* script for mobile menu ends here */
 
 /* script for paralax effect starts here */
-document.addEventListener("DOMContentLoaded", function () {
+
     const parallaxSectionsTop = document.querySelectorAll('.hero-bg');
     const parallaxSections = document.querySelectorAll('.home-middle-image-section, .home-bottom-image-section, .our-services-bottom-image-section');
 
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const width = window.innerWidth;
 
         if (type === 'top') {
-            if (width < 768) return 0.05;       // mobile header
+            if (width < 768) return 0.012;       // mobile header
             if (width < 1024) return 0.1;        // tablet header
             return 0.15;                         // desktop header
         } else {
@@ -143,88 +143,180 @@ document.addEventListener('DOMContentLoaded', () => {
 
             body.classList.add('body-modal-open');
         });
-    });
-/* script for modal box starts here */
-
     
-document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.getElementById('contact-form');
-  const thankYouContact = document.getElementById('thank-you-contact');
+    /* script for modal box starts here */
 
-  if (contactForm && thankYouContact) {
-    contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault(); // Block native redirect
+/* Close modal when clicking outside of it */
+        const contactForm = document.getElementById('contact-form');
+        const thankYouContact = document.getElementById('thank-you-contact');
 
-      const formData = new FormData(contactForm);
+        if (contactForm && thankYouContact) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault(); // Block native redirect
 
-      try {
-        const res = await fetch('https://formsubmit.co/ajax/bandeanlori@gmail.com', {
-          method: 'POST',
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
+                const formData = new FormData(contactForm);
 
-        if (res.ok) {
-          contactForm.reset();
-          contactForm.classList.add('hidden');
-          thankYouContact.classList.remove('hidden');
+                try {
+                    const res = await fetch('https://formsubmit.co/ajax/ian@cortenfreight.com', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (res.ok) {
+                        contactForm.reset();
+                        contactForm.classList.add('hidden');
+                        thankYouContact.classList.remove('hidden');
+                    }
+                } catch (error) {
+                    console.error('Form failed to submit:', error);
+                }
+            });
         }
-      } catch (error) {
-        console.error('Form failed to submit:', error);
-      }
     });
-  }
-});
 
+    // Close modal function
+    function closeModal() {
+        modalBox.classList.remove('modal-visible');
+        modalBox.classList.add('modal-hidden');
 
+        modal.classList.remove('overlay-visible');
+        modal.classList.add('overlay-hidden');
 
+        setTimeout(() => {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            body.classList.remove('body-modal-open');
+        }, 250); // faster close
+    }
 
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
 
+    closeBtn.addEventListener('click', closeModal);
 
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-
-
-
-
-
-
-        function closeModal() {
-            modalBox.classList.remove('modal-visible');
-            modalBox.classList.add('modal-hidden');
-
-            modal.classList.remove('overlay-visible');
-            modal.classList.add('overlay-hidden');
-
-            setTimeout(() => {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-                body.classList.remove('body-modal-open');
-            }, 250); // faster close
+        if (!form.agree.checked) {
+            alert('You must agree to the terms.');
+            return;
         }
 
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
+        const formData = new FormData(form);
+
+        try {
+            const res = await fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (res.ok) {
+                form.classList.add('hidden');
+                thankYouMessage.classList.remove('hidden');
+
+                setTimeout(() => {
+                    closeModal();
+                    form.reset();
+                    form.classList.remove('hidden');
+                    thankYouMessage.classList.add('hidden');
+                }, 5000);
+            } else {
+                alert("There was an error submitting the form.");
+                console.error(await res.text());
             }
-        });
+        } catch (error) {
+            alert("An unexpected error occurred.");
+            console.error(error);
+        }
+    });
+});
+/* script for modal box ends here */
 
-        closeBtn.addEventListener('click', closeModal);
 
-        form.addEventListener('submit', async (e) => {
+/* script for page loader starts here */
+document.querySelectorAll('a[href]').forEach(link => {
+    const loader = document.getElementById('page-loader');
+    link.addEventListener('click', function (e) {
+        const url = this.getAttribute('href');
+        if (!url.startsWith('#') && !url.startsWith('mailto:') && !url.startsWith('tel:')) {
+            e.preventDefault();
+            loader.style.display = 'flex';
+            loader.classList.remove('opacity-0');
+            setTimeout(() => {
+                window.location.href = url;
+            }, 200); // small delay for effect
+        }
+    });
+});
+/* script for page loader ends here */
+
+//  Scroll Button at Bottom script starts here
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollBtn = document.getElementById('scroll-btn');
+    const targetSection = document.getElementById('services');
+
+    if (scrollBtn && targetSection) {
+        scrollBtn.addEventListener('click', (e) => {
             e.preventDefault();
 
-            if (!form.agree.checked) {
-                alert('You must agree to the terms.');
-                return;
-            }
+            const headerOffset = window.innerWidth >= 768 ? 80 : 60;
+            const targetY = targetSection.offsetTop - headerOffset;
 
-            const formData = new FormData(form);
+            smoothScrollTo(targetY, 1200); // scroll duration = 1200ms
+        });
+    }
+
+    function smoothScrollTo(targetY, duration = 800) {
+        const startY = window.pageYOffset;
+        const distance = targetY - startY;
+        const startTime = performance.now();
+
+        function scrollStep(currentTime) {
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+
+            // EaseInOutCubic
+            const ease = progress < 0.5
+                ? 4 * progress * progress * progress
+                : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+            window.scrollTo(0, startY + distance * ease);
+
+            if (progress < 1) {
+                requestAnimationFrame(scrollStep);
+            }
+        }
+
+        requestAnimationFrame(scrollStep);
+    }
+
+/* Scroll Button at Bottom script ends here */
+
+
+
+/* script for contact form starts here */
+
+    const contactForm = document.getElementById('contact-form');
+    const thankYouContact = document.getElementById('thank-you-contact');
+
+    if (contactForm && thankYouContact) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
 
             try {
-                const res = await fetch(form.action, {
-                    method: "POST",
+                const res = await fetch('https://formsubmit.co/ajax/ian@cortenfreight.com', {
+                    method: 'POST',
                     body: formData,
                     headers: {
                         'Accept': 'application/json'
@@ -232,88 +324,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (res.ok) {
-                    form.classList.add('hidden');
-                    thankYouMessage.classList.remove('hidden');
-
-                    setTimeout(() => {
-                        closeModal();
-                        form.reset();
-                        form.classList.remove('hidden');
-                        thankYouMessage.classList.add('hidden');
-                    }, 5000);
-                } else {
-                    alert("There was an error submitting the form.");
-                    console.error(await res.text());
+                    contactForm.reset();
+                    contactForm.classList.add('hidden');
+                    thankYouContact.classList.remove('hidden');
                 }
             } catch (error) {
-                alert("An unexpected error occurred.");
-                console.error(error);
+                console.error('Submission failed:', error);
             }
         });
-    });
+    }
+});
 
-
-
-
-    /* script for mobile ends here */
-
-    //  Scroll Button at Bottom script starts here
-    document.addEventListener('DOMContentLoaded', () => {
-        const scrollBtn = document.getElementById('scroll-btn');
-        const targetSection = document.getElementById('services');
-
-        if (scrollBtn && targetSection) {
-            scrollBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-
-                const headerOffset = window.innerWidth >= 768 ? 80 : 60;
-                const targetY = targetSection.offsetTop - headerOffset;
-
-                smoothScrollTo(targetY, 1200); // scroll duration = 1200ms
-            });
-        }
-
-        function smoothScrollTo(targetY, duration = 800) {
-            const startY = window.pageYOffset;
-            const distance = targetY - startY;
-            const startTime = performance.now();
-
-            function scrollStep(currentTime) {
-                const timeElapsed = currentTime - startTime;
-                const progress = Math.min(timeElapsed / duration, 1);
-
-                // EaseInOutCubic
-                const ease = progress < 0.5
-                    ? 4 * progress * progress * progress
-                    : 1 - Math.pow(-2 * progress + 2, 3) / 2;
-
-                window.scrollTo(0, startY + distance * ease);
-
-                if (progress < 1) {
-                    requestAnimationFrame(scrollStep);
-                }
-            }
-
-            requestAnimationFrame(scrollStep);
-        }
-    });
-
-
-    // Scroll Button at Bottom script ends here
-
-
-
-    document.querySelectorAll('a[href]').forEach(link => {
-        const loader = document.getElementById('page-loader');
-        link.addEventListener('click', function (e) {
-            const url = this.getAttribute('href');
-            if (!url.startsWith('#') && !url.startsWith('mailto:') && !url.startsWith('tel:')) {
-                e.preventDefault();
-                loader.style.display = 'flex';
-                loader.classList.remove('opacity-0');
-                setTimeout(() => {
-                    window.location.href = url;
-                }, 200); // small delay for effect
-            }
-        });
-    });
+/* script for contact form ends here */
