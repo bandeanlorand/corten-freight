@@ -26,6 +26,8 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/tailwindcss.css">
     <link rel="stylesheet" href="css/styles.css">
 
 
@@ -131,7 +133,7 @@
 
         <!-- Scroll Button at Bottom -->
         <a href="#services" id="scroll-btn"
-            class="absolute left-1/2 bottom-[78px] flex flex-col items-center group scroll-button">
+            class="absolute left-1/2 bottom-[58px] flex flex-col items-center group scroll-button">
             <img src="images/SCROLL.png" alt="Scroll Button" class="w-12 h-12" />
             <span class="text-white text-sm mt-1 tracking-wider">SCROLL</span>
         </a>
@@ -377,7 +379,7 @@
                 class="md:col-span-3 md:col-start-3 flex flex-col md:flex-row justify-between w-full gap-y-5 md:gap-y-0 md:max-w-[84%] md:ml-auto font-medium">
                 <div class="space-y-5">
                     <a href="our-services.html" class="block md:flex hover:underline">Our Services</a>
-                    <a href="pwho-we-are.html" class="block md:flex hover:underline">Who We Are</a>
+                    <a href="who-we-are.html" class="block md:flex hover:underline">Who We Are</a>
                     <a href="contact-us.html" class="block md:flex hover:underline">Contact Us</a>
                 </div>
 
@@ -411,7 +413,8 @@
             <div id="thank-you-message" class="hidden text-center text-green-600 font-semibold text-lg py-8">
                 Thank you! Your request has been submitted successfully.
             </div>
-            <form action="https://formsubmit.co/ian@cortenfreight.com" method="POST" id="quote-form" class="space-y-2 overflow-y-auto max-h-[calc(100vh-280px)]">
+            <form action="https://formsubmit.co/ian@cortenfreight.com" method="POST" id="quote-form"
+                class="space-y-2 overflow-y-auto max-h-[calc(100vh-280px)]">
                 <!-- FormSubmit Config -->
                 <input type="hidden" name="_subject" value="New Quote Request from Corten Freight" />
                 <input type="hidden" name="_next" value="https://bandeanlorand.github.io/corten-freight/" />
@@ -504,8 +507,7 @@
                 <div class="flex items-center gap-2">
                     <input type="checkbox" id="agree" name="I Agree to Terms" required class="mt-0">
                     <label for="agree" class="text-[0.625rem]">
-                        I agree to Corten Freight's <a href="#" class="text-blue-600 underline">Terms of Use</a> and
-                        <a href="#" class="text-blue-600 underline">Privacy Policy</a>
+                        I agree to Corten Freight's <a target="_blank" onclick="window.open ('privacy-policy.html', ''); return false" href="javascript:void(0);"  class="text-blue-600 underline" rel="noopener noreferrer">Privacy Policy</a>. 
                     </label>
                 </div>
 

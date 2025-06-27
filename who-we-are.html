@@ -19,23 +19,82 @@
             pointer-events: none;
         }
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/tailwindcss.css">
     <link rel="stylesheet" href="css/styles.css">
-
-
-    <title>Corten Freight - Home</title>
     <meta name="description"
         content="Corten Freight is a leading freight brokerage firm, offering reliable, precise, and innovative logistics solutions." />
-    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Who We Are - Corten Freight",
+  "url": "https://www.cortenfreight.com/who-we-are.html",
+  "description": "Learn about Corten Freight’s team, values, and mission. Discover what drives us to provide reliable, transparent, and customer-focused freight brokerage solutions."
+}
+</script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "Who We Are - Corten Freight",
+  "url": "https://www.cortenfreight.com/who-we-are.html",
+  "isPartOf": {
+    "@type": "WebSite",
+    "url": "https://www.cortenfreight.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Corten Freight",
+    "url": "https://www.cortenfreight.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.cortenfreight.com/images/corten-freight-logo.svg"
+    }
+  },
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Corten Freight",
+    "description": "Corten Freight is a leading freight brokerage firm dedicated to clarity, ownership, precision, and care in every shipment.",
+    "url": "https://www.cortenfreight.com/"
+  }
+}
+</script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cortenfreight.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Who We Are",
+      "item": "https://www.cortenfreight.com/who-we-are.html"
+    }
+  ]
+}
+</script>
+<link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png" />
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script>
         window.addEventListener('load', () => {
             const loader = document.getElementById('page-loader');
@@ -47,6 +106,20 @@
             }, 600); // match with CSS transition
         });
     </script>
+    <!-- Open Graph -->
+<meta property="og:title" content="Who We Are - Corten Freight">
+<meta property="og:description" content="Meet the team behind Corten Freight. We build lasting partnerships through clarity, ownership, and precision.">
+<meta property="og:image" content="https://www.cortenfreight.com/images/og-home.jpg">
+<meta property="og:url" content="https://www.cortenfreight.com/who-we-are.html">
+<meta property="og:type" content="website">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Who We Are - Corten Freight">
+<meta name="twitter:description" content="Meet the team behind Corten Freight. We build lasting partnerships through clarity, ownership, and precision.">
+<meta name="twitter:image" content="https://www.cortenfreight.com/images/og-home.jpg">
+
+
 </head>
 
 <body class="text-slate-800 bg-white loading bg-[#05445E">
@@ -76,10 +149,10 @@
                 <nav id="mobile-menu" class="fixed md:relative top-0 left-0 w-full  md:py-0 bg-[var(--mobile--bg-color)] bg-opacity-95 
                 z--1 md:z-40 overflow-hidden transition-all duration-300 
         max-h-0 md:max-h-none opacity-0 md:opacity-100 md:flex  md:text-sm 
-         md:font-medium md:bg-transparent">
+         md:font-medium md:bg-transparent max-h-[100dvh] overflow-y-auto">
                     <div
                         class="flex flex-col md:flex-row items-center justify-center md:space-y-0 py-0 md:py-0 
-                        text-white text-lg font-medium gap-[var(--nav-gap-mobile)] md:gap-[var(--nav-gap)]  md:text-[var(--header-nav-color)] md:w-full md:ml-[-68px] md:h-[2.825rem] ">
+                        text-white text-lg font-medium gap-[var(--nav-gap-mobile)] md:gap-[var(--nav-gap)]  md:text-[var(--header-nav-color)] md:w-full md:ml-[-68px] md:h-[2.825rem]">
                         <a href="our-services.html" class="hover:underline text-2xl md:text-base m-[0] ">Our
                             Services</a>
                         <a href="javascript:void(0);" class="hover:underline text-2xl md:text-base m-[0] active">Who We
@@ -104,19 +177,14 @@
     </header>
     <!-- Header ends here -->
 
-
-
-    <!-- --header-cta-bg-color -->
-
-
     <!-- Hero -->
-    <section class="hero-bg who-we-are relative bg-cover bg-center bg-no-repeat bg-fixed text-center px-6 py-24 min-h-[480px] md:min-h-[640px] flex 
-    items-center justify-center h-screen h-dvh lg:h-[calc(100dvh-80px)]">
+    <section class="hero-bg who-we-are relative bg-cover bg-center bg-no-repeattext-center px-6 py-24 min-h-[480px]  min-h-[calc(100vh-50px)] flex 
+    items-center justify-center">
         <h1 class="text-white text-3xl md:text-4xl font-normal">Who We Are</h1>
 
         <!-- Scroll Button at Bottom -->
         <a href="#services" id="scroll-btn"
-            class="absolute left-1/2 bottom-[78px] flex flex-col items-center group scroll-button">
+            class="absolute left-1/2 bottom-[88px] flex flex-col items-center group scroll-button">
             <img src="images/SCROLL.png" alt="Scroll Button" class="w-12 h-12" />
             <span class="text-white text-sm mt-1 tracking-wider">SCROLL</span>
         </a>
@@ -273,7 +341,7 @@
                 class="md:col-span-3 md:col-start-3 flex flex-col md:flex-row justify-between w-full gap-y-5 md:gap-y-0 md:max-w-[84%] md:ml-auto font-medium">
                 <div class="space-y-5">
                     <a href="our-services.html" class="block md:flex hover:underline">Our Services</a>
-                    <a href="pwho-we-are.html" class="block md:flex hover:underline">Who We Are</a>
+                    <a href="who-we-are.html" class="block md:flex hover:underline">Who We Are</a>
                     <a href="contact-us.html" class="block md:flex hover:underline">Contact Us</a>
                 </div>
 
@@ -307,7 +375,8 @@
             <div id="thank-you-message" class="hidden text-center text-green-600 font-semibold text-lg py-8">
                 Thank you! Your request has been submitted successfully.
             </div>
-            <form action="https://formsubmit.co/ian@cortenfreight.com" method="POST" id="quote-form" class="space-y-2 overflow-y-auto max-h-[calc(100vh-280px)]">
+            <form action="https://formsubmit.co/ian@cortenfreight.com" method="POST" id="quote-form"
+                class="space-y-2 overflow-y-auto max-h-[calc(100vh-280px)]">
                 <!-- FormSubmit Config -->
                 <input type="hidden" name="_subject" value="New Quote Request from Corten Freight" />
                 <input type="hidden" name="_next" value="https://bandeanlorand.github.io/corten-freight/" />
@@ -400,8 +469,7 @@
                 <div class="flex items-center gap-2">
                     <input type="checkbox" id="agree" name="I Agree to Terms" required class="mt-0">
                     <label for="agree" class="text-[0.625rem]">
-                        I agree to Corten Freight's <a href="#" class="text-blue-600 underline">Terms of Use</a> and
-                        <a href="#" class="text-blue-600 underline">Privacy Policy</a>
+                        I agree to Corten Freight's <a target="_blank" onclick="window.open ('privacy-policy.html', ''); return false" href="javascript:void(0);"  class="text-blue-600 underline" rel="noopener noreferrer">Privacy Policy</a>. 
                     </label>
                 </div>
 
