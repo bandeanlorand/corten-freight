@@ -26,8 +26,8 @@
         href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/output.css">
-    <link rel="stylesheet" href="css/tailwindcss.css">
+    <link rel="stylesheet" href="src/output.css">
+    <!-- <link rel="stylesheet" href="css/tailwindcss.css"> -->
     <link rel="stylesheet" href="css/styles.css">
 
 
@@ -190,14 +190,13 @@
                         <ul class="text-sm space-y-[16px] md:space-y-[24px] text-slate-700">
                             <li class="text-[var(--main-blue-color)]">
                                 <strong
-                                    class="text-[1.125rem] md:text-[1.25rem] font-normal leading-[100%]">Port-To-Warehouse
+                                    class="text-[1.125rem] md:text-[1.25rem] font-normal leading-[100%]">Port-To-Door
                                     & Rail-To-Door Delivery</strong>
                                 <p>Smooth cargo transfers to reduce downtime and keep your supply chain moving.</p>
                             </li>
                             <li class="text-[var(--main-blue-color)]">
-                                <strong class="text-[1.125rem] md:text-[1.25rem] font-normal leading-[100%]">Expedited
-                                    Handling</strong>
-                                <p>Solutions tailored for urgent, time-sensitive shipments.</p>
+                                <strong class="text-[1.125rem] md:text-[1.25rem] font-normal leading-[100%]">Transloading & Storage</strong>
+                                <p>Specialized solutions to cover any warehousing & storage needs.s</p>
                             </li>
                             <li class="text-[var(--main-blue-color)]">
                                 <strong class="text-[1.125rem] md:text-[1.25rem] font-normal leading-[100%]">Customs &
@@ -426,12 +425,12 @@
                     <div class="w-full">
                         <label class="block">First Name <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="text" name="First Name" required class="w-full border px-2 py-1">
+                        <input type="text" name="First Name" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[2px]">
                     </div>
                     <div class="w-full">
                         <label class="block">Last Name <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="text" name="Last Name" required class="w-full border px-2 py-1">
+                        <input type="text" name="Last Name" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[-2px]">
                     </div>
                 </div>
 
@@ -439,7 +438,7 @@
                 <div>
                     <label class="block">Company <sub
                             class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                    <input type="text" name="Company" required class="w-full border px-2 py-1 md:max-w-[90%]">
+                    <input type="text" name="Company" required class="w-full border px-2 py-1 w-[calc(100%-2px) md:max-w-[90%] ml-[2px]">
                 </div>
 
                 <!-- Phone + Email -->
@@ -447,12 +446,12 @@
                     <div class="w-full">
                         <label class="block">Phone Number <span class="text-red-500">*</span></label>
                         <input type="tel" name="Phone Number" pattern="[0-9\-+\s]+" required
-                            class="w-full border px-2 py-1">
+                            class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[2px]">
                     </div>
                     <div class="w-full">
                         <label class="block">Email <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="email" name="email" required class="w-full border px-2 py-1">
+                        <input type="email" name="email" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[-2px]">
                     </div>
                 </div>
 
@@ -461,12 +460,12 @@
                     <div class="w-full">
                         <label class="block">Origin (City/State/Province/Zip) <span
                                 class="text-red-500">*</span></label>
-                        <input type="text" name="Origin" required class="w-full border px-2 py-1">
+                        <input type="text" name="Origin" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[2px]">
                     </div>
                     <div class="w-full">
                         <label class="block">Destination (City/State/Province/Zip) <span
                                 class="text-red-500">*</span></label>
-                        <input type="text" name="Destination" required class="w-full border px-2 py-1">
+                        <input type="text" name="Destination" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[-2px]">
                     </div>
                 </div>
 
@@ -475,24 +474,25 @@
                     <div class="w-full">
                         <label class="block">Equipment Type <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="text" name="Equipment Type" required class="w-full border px-2 py-1">
+                        <input type="text" name="Equipment Type" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[2px]">
                     </div>
                     <div class="w-full">
                         <label class="block">Equipment Size <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="text" name="Equipment Size" required class="w-full border px-2 py-1">
+                        <input type="text" name="Equipment Size" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[-2px]">
                     </div>
                 </div>
 
                 <!-- Optional Fields -->
                 <div class="flex flex-col md:flex-row md:gap-3">
                     <div class="w-full">
-                        <label class="block">Commodity</label>
-                        <input type="text" name="Commodity" class="w-full border px-2 py-1">
+                        <label class="block">Commodity <sub
+                                class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
+                        <input type="text" name="Commodity" required class="w-full border px-2 py-1 max-w-[calc(100%-2px) ml-[2px]">
                     </div>
                     <div class="w-full">
                         <label class="block">Weight</label>
-                        <input type="text" name="Weight" class="w-full border px-2 py-1">
+                        <input type="text" name="Weight" class="w-full border px-2 py-1 w-[calc(100%-4px)] ml-[-2px]">
                     </div>
                 </div>
 
@@ -500,14 +500,16 @@
                 <div>
                     <label class="block">Additional Freight / Shipment Details <sub
                             class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                    <textarea name="Details" rows="3" required class="w-full border px-2 py-1"></textarea>
+                    <textarea name="Details" rows="3" required class="w-full border px-2 py-1 max-w-[calc(100%-6px)] ml-[2px] mr-[-2px]"></textarea>
                 </div>
 
                 <!-- Agreement Checkbox -->
                 <div class="flex items-center gap-2">
                     <input type="checkbox" id="agree" name="I Agree to Terms" required class="mt-0">
                     <label for="agree" class="text-[0.625rem]">
-                        I agree to Corten Freight's <a target="_blank" onclick="window.open ('privacy-policy.html', ''); return false" href="javascript:void(0);"  class="text-blue-600 underline" rel="noopener noreferrer">Privacy Policy</a>. 
+                        I agree to Corten Freight's <a target="_blank"
+                            onclick="window.open ('privacy-policy.html', ''); return false" href="javascript:void(0);"
+                            class="text-blue-600 underline" rel="noopener noreferrer">Privacy Policy</a>.
                     </label>
                 </div>
 

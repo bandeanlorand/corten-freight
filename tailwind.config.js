@@ -1,35 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./*.html"],
-  safelist: [
-    {
-      pattern: /bg-\[.*\]/,
-    },
-    {
-      pattern: /text-\[.*\]/,
-    },
-    {
-      pattern: /p[trblxy]?-?\[.*\]/,
-    },
-    {
-      pattern: /m[trblxy]?-?\[.*\]/,
-    },
-    {
-      pattern: /rounded-\[.*\]/,
-    },
-    {
-      pattern: /w-\[.*\]/,
-    },
-    {
-      pattern: /h-\[.*\]/,
-    },
-    {
-      pattern: /z-\[.*\]/,
-    }
+  content: [
+    "./*.html",       // Matches all HTML files in the root folder
+    "./src/**/*.{html,js}",  // Optional, if you also have nested files inside /src
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-  important: true,
-}
+};

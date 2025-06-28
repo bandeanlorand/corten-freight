@@ -25,8 +25,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/output.css">
-    <link rel="stylesheet" href="css/tailwindcss.css">
+    <link rel="stylesheet" href="src/output.css">
+    <!-- <link rel="stylesheet" href="css/tailwindcss.css"> -->
     <link rel="stylesheet" href="css/styles.css">
     <meta name="description"
         content="Corten Freight is a leading freight brokerage firm, offering reliable, precise, and innovative logistics solutions." />
@@ -85,7 +85,7 @@
   ]
 }
 </script>
-<link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png" />
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -197,13 +197,14 @@
         <div class="max-w-[640px] mx-auto  mb-[1.25rem]">
             <h2
                 class="font-normal mb-4 text-white text-[1.75rem] md:text-[2rem] leading-[2.5rem] md:leading-[2.75rem] font-light">
-                Your Trusted Freight Brokerage Partner</h2>
+                The Freight Partner You Rely On</h2>
             <p class="max-w-2xl mx-auto text-white text-[1rem] leading-[1.625rem] md:leading-[1.75rem] font-light">
                 We’re eager to discuss your logistics needs and explore how Corten Freight can support your business
                 growth.
             </p>
             <p class="max-w-2xl mx-auto text-white text-[1rem] leading-[1.625rem] md:leading-[1.75rem] font-light">
-                We pride ourselves on clear communication, proactive
+                We pride ourselves on clear communication, proactive updates, and trust—ensuring every shipment runs
+                smoothly, every time.
                 Share your details below, and a dedicated team member will reach out promptly.
             </p>
         </div>
@@ -227,73 +228,53 @@
         </p>
 
 
-        <!-- <form id="contact-form" method="POST" class="contact-us">
-  <input type="hidden" name="_subject" value="New Contact from Corten Freight">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha" value="false">
-
-  <label>First Name *</label>
-  <input type="text" name="First Name" required class="border px-2 py-1 w-full"><br>
-
-  <label>Email *</label>
-  <input type="email" name="email" required class="border px-2 py-1 w-full"><br>
-
-  <button type="submit" class="bg-blue-500 text-white px-4 py-2 mt-4">Submit</button>
-</form>
-
-<div id="thank-you-contact" class="hidden text-green-600 font-semibold text-center mt-6">
-  Thank you! Your message has been submitted successfully.
-</div>
- -->
         <form id="contact-form" method="POST" class="max-w-3xl mx-auto text-left max-w-[489px] contact-us">
             <input type="hidden" name="_subject" value="New Contact from Corten Freight">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
 
 
-
-
-
             <div class="grid md:grid-cols-2 gap-2">
                 <div>
                     <label class="block">First Name <sub
                             class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                    <input type="text" name="First Name" required class="w-full border px-2 py-1">
+                    <input type="text" name="First Name" required class="w-full border px-2 py-1 w-[calc(100%-2px)">
                 </div>
                 <div>
                     <label class="block">Last Name <sub
                             class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                    <input type="text" name="Last Name" required class="w-full border px-2 py-1">
+                    <input type="text" name="Last Name" required class="w-full border px-2 py-1 w-[calc(100%-2px)">
                 </div>
                 <div class="md:col-span-2">
                     <label class="block">Company <sub
                             class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                    <input type="text" name="Company" required class="w-full border px-2 py-1">
+                    <input type="text" name="Company" required class="w-full border px-2 py-1 w-[calc(100%-2px)">
                 </div>
                 <div class="md:col-span-2 md:max-w-[400px]">
                     <label class="block">Email <sub
                             class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                    <input type="email" name="email" required class="w-full border px-2 py-1">
+                    <input type="email" name="email" required class="w-full border px-2 py-1 w-[calc(100%-2px)">
                 </div>
                 <div class="md:col-span-2 md:max-w-[400px]">
                     <label class="block">Phone Number <sub
                             class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                    <input type="tel" name="Phone Number" required class="w-full border px-2 py-1">
+                    <input type="tel" name="Phone Number" required class="w-full border px-2 py-1 w-[calc(100%-2px)">
                 </div>
                 <div class="md:col-span-2">
                     <label class="block">Message</label>
-                    <textarea name="Message" rows="4" class="w-full border px-2 py-1"></textarea>
+                    <textarea name="Message" rows="4" class="w-full border px-2 py-1 w-[calc(100%-2px)"></textarea>
                 </div>
             </div>
 
-            <div class="mt-4 flex items-start gap-2 justify-start font-bold pb-[28px] md:pb-[36px]">
+            <div class="mt-4 flex items-start gap-2 justify-start font-bold pb-[28px] md:pb-[36px] items-center">
                 <input type="checkbox" required name="agree"
                     class="appearance-none w-[14px] h-[14px] border border-[#8D8D8D] bg-white checked:bg-[var(--form-link-text-color)] checked:border-[var(--form-link-text-color)] focus:outline-none focus:ring-1 focus:ring-[var(--form-link-text-color)] mt-[2px]" />
                 <label class="text-[10px] font-bold leading-tight pb-0">
-                    I agree to Corten Freight’s
-                    <a href="#" class="underline text-[var(--form-link-text-color)]">Terms of Use</a> and
-                    <a href="#" class="underline text-[var(--form-link-text-color)]">Privacy Policy and Cookie
-                        Policy</a>.
+                    <label for="agree" class="text-[0.625rem] mb-[-2px] pb-0">
+                        I agree to Corten Freight's <a target="_blank"
+                            onclick="window.open ('privacy-policy.html', ''); return false" href="javascript:void(0);"
+                            class="text-blue-600 underline" rel="noopener noreferrer">Privacy Policy</a>.
+                    </label>
                 </label>
             </div>
 
@@ -321,13 +302,12 @@
                 class="max-w-2xl mx-auto text-black text-[1rem] md:text-[1.25rem] leading-[1.625rem] md:leading-[2rem] font-normal pb-[28px] md:pb-[24px]">
                 Prefer to speak with us right away? Use the link below to select a convenient time for a one-on-one
                 discussion:</p>
-            <a href="#"
+                
+            <a target="_blank"  onclick="window.open ('https://calendly.com/ian-cortenfreight/30min', ''); return false" href="javascript:void(0);"  rel="noopener noreferrer"
                 class="bg-[var(--orange)] hover:bg-[var(--orange-hover)] active:scale-95 text-white px-6 py-2 rounded-[4px] text-[1.25rem] inline-block mb-10 tracking-[2%] leading-[1.25rem] px-[15.5px] py-[13.5px] md:px-[40px] md:py-[14px]">Schedule
                 Your Meeting Now
-                <span
-                    class="h-[1px] md:h-[100%] bg-white w-full md:w-[1px] block md:inline-block mb-[12px] mt-[9px] md:mb-[0px] md:mt-[0px] p-0 leading-normal md:mx-[18px] ">&nbsp;</span><svg
-                    width="120" height="31" viewBox="0 0 120 31" fill="none" class="block md:inline m-auto"
-                    xmlns="http://www.w3.org/2000/svg">
+                <span class="w-full h-[1px] bg-white block mx-auto my-3"></span><svg width="120" height="31"
+                    viewBox="0 0 120 31" fill="none" class="block md:inline m-auto" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_0_167)">
                         <path
                             d="M71.7306 12.3393C73.5917 12.3393 75.3541 13.5187 75.726 16.0668H67.4377C67.7845 13.8308 69.3982 12.3393 71.7306 12.3393ZM75.4611 19.8368C74.8281 20.8589 73.6046 21.6451 71.9295 21.6451C69.6213 21.6451 67.8589 20.3344 67.4377 18.0206H77.8361C77.8862 17.6888 77.912 17.3539 77.912 17.0181C77.912 13.4196 75.4832 10.2314 71.7321 10.2314C67.9811 10.2314 65.2305 13.1877 65.2305 16.993C65.2305 20.7983 67.887 23.7545 71.8809 23.7545C74.3629 23.7545 76.249 22.5972 77.3404 20.8455L75.4611 19.8368Z"
@@ -375,7 +355,7 @@
                 For immediate support or inquiries, you can also reach us directly:</p>
 
             <div class="bg-white rounded-[8px] inline-block py-[32px] px-[41px] md:py-[32px] md:px-[104px]">
-                <a href="tel:212-0000-0000"
+                <a href="tel:18134003759"
                     class="block font-semibold text-[var(--circle-blue)] font-Merriweather-Sans text-[1.5rem] md:text-[1.75rem] font-normal mb-[25px] md:mb-[20px]">
                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none" class="inline"
                         xmlns="http://www.w3.org/2000/svg">
@@ -384,7 +364,7 @@
                             stroke="#1C78C3" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
 
-                    212-0000-0000
+                    (813) 400-3759
                 </a>
                 <a href="mailto:info@cortenfreight.com"
                     class="block font-semibold text-[var(--circle-blue)] font-Merriweather-Sans text-[1rem] font-light md:text-[1.5rem]">
@@ -491,12 +471,12 @@
                     <div class="w-full">
                         <label class="block">First Name <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="text" name="First Name" required class="w-full border px-2 py-1">
+                        <input type="text" name="First Name" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[2px]">
                     </div>
                     <div class="w-full">
                         <label class="block">Last Name <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="text" name="Last Name" required class="w-full border px-2 py-1">
+                        <input type="text" name="Last Name" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[-2px]">
                     </div>
                 </div>
 
@@ -504,7 +484,7 @@
                 <div>
                     <label class="block">Company <sub
                             class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                    <input type="text" name="Company" required class="w-full border px-2 py-1 md:max-w-[90%]">
+                    <input type="text" name="Company" required class="w-full border px-2 py-1 w-[calc(100%-2px) md:max-w-[90%] ml-[2px]">
                 </div>
 
                 <!-- Phone + Email -->
@@ -512,12 +492,12 @@
                     <div class="w-full">
                         <label class="block">Phone Number <span class="text-red-500">*</span></label>
                         <input type="tel" name="Phone Number" pattern="[0-9\-+\s]+" required
-                            class="w-full border px-2 py-1">
+                            class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[2px]">
                     </div>
                     <div class="w-full">
                         <label class="block">Email <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="email" name="email" required class="w-full border px-2 py-1">
+                        <input type="email" name="email" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[-2px]">
                     </div>
                 </div>
 
@@ -526,12 +506,12 @@
                     <div class="w-full">
                         <label class="block">Origin (City/State/Province/Zip) <span
                                 class="text-red-500">*</span></label>
-                        <input type="text" name="Origin" required class="w-full border px-2 py-1">
+                        <input type="text" name="Origin" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[2px]">
                     </div>
                     <div class="w-full">
                         <label class="block">Destination (City/State/Province/Zip) <span
                                 class="text-red-500">*</span></label>
-                        <input type="text" name="Destination" required class="w-full border px-2 py-1">
+                        <input type="text" name="Destination" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[-2px]">
                     </div>
                 </div>
 
@@ -540,24 +520,25 @@
                     <div class="w-full">
                         <label class="block">Equipment Type <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="text" name="Equipment Type" required class="w-full border px-2 py-1">
+                        <input type="text" name="Equipment Type" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[2px]">
                     </div>
                     <div class="w-full">
                         <label class="block">Equipment Size <sub
                                 class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                        <input type="text" name="Equipment Size" required class="w-full border px-2 py-1">
+                        <input type="text" name="Equipment Size" required class="w-full border px-2 py-1 w-[calc(100%-2px) ml-[-2px]">
                     </div>
                 </div>
 
                 <!-- Optional Fields -->
                 <div class="flex flex-col md:flex-row md:gap-3">
                     <div class="w-full">
-                        <label class="block">Commodity</label>
-                        <input type="text" name="Commodity" class="w-full border px-2 py-1">
+                        <label class="block">Commodity <sub
+                                class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
+                        <input type="text" name="Commodity" required class="w-full border px-2 py-1 max-w-[calc(100%-2px) ml-[2px]">
                     </div>
                     <div class="w-full">
                         <label class="block">Weight</label>
-                        <input type="text" name="Weight" class="w-full border px-2 py-1">
+                        <input type="text" name="Weight" class="w-full border px-2 py-1 w-[calc(100%-4px)] ml-[-2px]">
                     </div>
                 </div>
 
@@ -565,14 +546,16 @@
                 <div>
                     <label class="block">Additional Freight / Shipment Details <sub
                             class="text-[var(--require-star-red)] text-[1.1rem] leading-[10px] inline-block">*</sub></label>
-                    <textarea name="Details" rows="3" required class="w-full border px-2 py-1"></textarea>
+                    <textarea name="Details" rows="3" required class="w-full border px-2 py-1 max-w-[calc(100%-6px)] ml-[2px] mr-[-2px]"></textarea>
                 </div>
 
                 <!-- Agreement Checkbox -->
                 <div class="flex items-center gap-2">
                     <input type="checkbox" id="agree" name="I Agree to Terms" required class="mt-0">
                     <label for="agree" class="text-[0.625rem]">
-                        I agree to Corten Freight's <a target="_blank" onclick="window.open ('privacy-policy.html', ''); return false" href="javascript:void(0);"  class="text-blue-600 underline" rel="noopener noreferrer">Privacy Policy</a>. 
+                        I agree to Corten Freight's <a target="_blank"
+                            onclick="window.open ('privacy-policy.html', ''); return false" href="javascript:void(0);"
+                            class="text-blue-600 underline" rel="noopener noreferrer">Privacy Policy</a>.
                     </label>
                 </div>
 
